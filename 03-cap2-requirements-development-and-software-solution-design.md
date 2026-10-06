@@ -974,3 +974,4 @@ Se presenta y explica el **Database Diagram** que incluye los objetos de base de
 ![Database Diagram](assets/images/cap2/fleet-database-diagram.png)
 
 <br>
+
