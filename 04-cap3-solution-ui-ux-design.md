@@ -7,7 +7,7 @@
 ### 3.1.1. Style Guidelines
 ### **Colores**
 
-![Colors](assets/images/cap3/Colors.png) 
+![Colors](assets/images/cap%203/Colors.png)
 
 
 Amarillo-#FFD60A: El color transmite energía, atención y optimismo. Eso lo hace ideal para llamados a la acción, iconos y botones importantes, alertas y elementos que necesiten destacar.
