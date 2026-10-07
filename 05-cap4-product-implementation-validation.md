@@ -178,7 +178,7 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 - Uso de repositorios como única fuente de verdad, coordinando datos locales (Room) y remotos (Retrofit).
 - Uso de Retrofit con convertidor Gson para el consumo de la API REST, y Coil (`AsyncImage`) para la carga de imágenes remotas.
 - Uso de DataStore para preferencias simples (idioma, laboratorio seleccionado, sesión), en lugar de SharedPreferences.
-- Declaración de permisos en `AndroidManifest.xml` y solicitud en tiempo de ejecución de los permisos peligrosos (por ejemplo, `CAMERA` para CameraX).
+- Declaración de permisos en `AndroidManifest.xml` y solicitud en tiempo de ejecución de los permisos peligrosos.
 - Uso de `dp` para dimensiones y espaciados (múltiplos de 8dp), `sp` para textos y áreas táctiles mínimas de 48dp.
 - Diseño adaptativo basado en Window Size Classes (Compact, Medium, Expanded) y soporte de tema claro/oscuro.
 - Uso de archivos `strings.xml` en `values/` y `values-en/` para soporte bilingüe ES/EN; no se usan textos fijos en los composables.
@@ -202,6 +202,34 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 
 ### 4.1.4. Software Deployment Configuration
 
+En esta sección se describe la configuración necesaria para desplegar los productos de BevTrace: la Landing Page, publicada en GitHub Pages.
+
+#### 1. Landing Page – HTML, CSS y JavaScript
+
+##### Repositorio de Código Fuente
+
+La Landing Page se implementa empleando únicamente HTML, CSS y JavaScript nativo. Todos los archivos del proyecto deben almacenarse en un repositorio en GitHub, asegurando que el archivo **`index.html`** se ubique en la raíz del repositorio (`/`). Esto es indispensable para que GitHub Pages lo reconozca automáticamente como punto de entrada del sitio.
+
+##### Activación de GitHub Pages
+
+1. Acceder al repositorio en GitHub.
+2. Ir a la pestaña **Settings**.
+3. En el menú lateral, seleccionar la opción **Pages**.
+4. En **Build and deployment**, configurar:
+   - Source: `Deploy from a branch`
+   - Rama: `main`
+   - Carpeta: `/ (root)`
+5. Guardar los cambios.
+
+##### Publicación
+
+Tras guardar la configuración, GitHub generará de forma automática una URL pública donde estará disponible la Landing Page. El formato de la URL es:
+
+https://<usuario>.github.io/<repositorio>/
+
+##### Actualizaciones
+
+Cualquier commit realizado en la rama `main` será desplegado automáticamente en la página publicada, sin necesidad de pasos adicionales. La actualización puede tardar unos minutos en reflejarse.
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
