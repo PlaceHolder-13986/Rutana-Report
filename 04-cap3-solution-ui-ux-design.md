@@ -7,7 +7,7 @@
 ### 3.1.1. Style Guidelines
 ### **Colores**
 
-![Colors](Resources/Colors.png)
+![Colors](assets/images/cap 3/Colors.png) 
 
 
 Amarillo-#FFD60A: El color transmite energía, atención y optimismo. Eso lo hace ideal para llamados a la acción, iconos y botones importantes, alertas y elementos que necesiten destacar.
@@ -30,18 +30,18 @@ Se selecciono la tipografia "Plus Jakarta Sans" como la principal para los titul
 
 Plus Jakarta:
 
-![Plus Jakarta](Resources/Plus_Jakarta_Tamaños.png)
+![Plus Jakarta](assets/images/cap 3//Plus_Jakarta_Tamaños.png)
 
 Inter:
 
-![Inter](Resources/Inter_Tamaños.png)
+![Inter](assets/images/cap 3//Inter_Tamaños.png)
 
 
 ### **Branding**
 
 El branding de Rutana se diesño para demostrar simpleza, profesionalidad y enfoque. El logo posee un enfoque modesto y con el significado de seguir las rutas, demostrado con las flechas direccionales, el de color blanco simbolizando el camión y las amarilla simbolizan las rutas ya definidas que se deben de realizar. 
 
-![Rutana](<Resources/Logo.png>)
+![Rutana](<assets/images/cap 3//Logo.png>)
 
 
 ### **Espaciado**  
