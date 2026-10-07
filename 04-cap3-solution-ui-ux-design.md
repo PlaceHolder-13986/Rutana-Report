@@ -30,18 +30,18 @@ Se selecciono la tipografia "Plus Jakarta Sans" como la principal para los titul
 
 Plus Jakarta:
 
-![Plus Jakarta](assets/images/cap 3//Plus_Jakarta_Tamaños.png)
+![Plus Jakarta](assets/images/cap%203/Plus_Jakarta_Tamaños.png)
 
 Inter:
 
-![Inter](assets/images/cap 3//Inter_Tamaños.png)
+![Inter](assets/images/cap%203/Inter_Tamaños.png)
 
 
 ### **Branding**
 
 El branding de Rutana se diesño para demostrar simpleza, profesionalidad y enfoque. El logo posee un enfoque modesto y con el significado de seguir las rutas, demostrado con las flechas direccionales, el de color blanco simbolizando el camión y las amarilla simbolizan las rutas ya definidas que se deben de realizar. 
 
-![Rutana](<assets/images/cap 3//Logo.png>)
+![Rutana](<assets/images/cap%203/Logo.png>)
 
 
 ### **Espaciado**  
