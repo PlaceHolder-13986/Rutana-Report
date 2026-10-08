@@ -76,7 +76,8 @@ Proyecto
 |   0.8   | 19/09/2026 | Howard Robles, Guillermo Arturo  | Creación del eventstorming.          |
 |   1.1   | 06/10/2026 | Howard Robles, Guillermo Arturo  | Creación del sprint planning 1.      |
 |1.2      | 07/10/2026 | Costa Morales, Christofer William  | Creación del Product Implementation & Validation      |
-|1.3      | 08/10/2026 | Howard Robles, Guillermo Arturo  | Creación de la biliografia.   |
+|1.3      | 07/10/2026 | Howard Robles, Guillermo Arturo  | Creación de la biliografia.   |
+| 1.4   | 07/10/2026 | Howard Robles, Guillermo Arturo  | Creación del user stories.      |
 
 
 ---
