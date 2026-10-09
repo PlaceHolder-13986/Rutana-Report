@@ -472,31 +472,126 @@ Flujo de reporte de imprevistos en ruta con categorización por prioridad y adju
 
 Los diagramas de flujo de usuario (User Flows) mapean los caminos de decisión completos que realiza el usuario para alcanzar sus objetivos dentro del ecosistema móvil de Rutana:
 
-- **User Flow 1 (Autenticación y Onboarding):** Mapea la verificación de credenciales en el inicio de sesión, la gestión de errores ante contraseñas incorrectas y la bifurcación del flujo según el tipo de registro (Administrador o Conductor).
-
-![user_flow.png](assets/images/cap3/mock-ups/user_flow/user_flow1.png)
-
-- **User Flow 2 (Gestión de Usuarios):** Modela el flujo de invitación de personal por email, la asignación de permisos según el plan contratado y la habilitación o deshabilitación de miembros de la organización.
+### User Flow 1: Autenticación y Registro de Usuario (Sign In & Sign Up)
 
 ![user_flow1.png](assets/images/cap3/mock-ups/user_flow/user_flow1.png)
 
-- **User Flow 3 (Monitoreo de Flota y Vehículos):** Ilustra las decisiones para consultar fichas técnicas de unidades, modificar la placa o capacidad máxima, asignar miembros de equipo al vehículo y cambiar su estado operacional.
+* **User Goal:** Acceder a la plataforma con credenciales válidas o registrar una nueva cuenta corporativa para comenzar la gestión logística.
+* **User Persona:** Administrador de Flota / Conductor (Driver).
+* **Happy Path (Ruta Esperada):**
+    1. El usuario abre la aplicación y visualiza la pantalla de **Log In**.
+    2. Presiona la opción *"Create an account"*.
+    3. En la pantalla de **Register**, selecciona su rol (*Administrator* o *Driver*).
+    4. Completa los campos obligatorios: Nombre completo, Correo electrónico, Teléfono, Nombre de la empresa, RUC y Contraseña.
+    5. Marca la casilla de verificación de *Términos y Condiciones*.
+    6. Presiona el botón amarillo **"Create account"**.
+    7. El sistema valida los datos y redirige al usuario a la pantalla de **Log In** (o directamente al Dashboard principal) con su cuenta activada.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Credenciales incorrectas en Log In:** El usuario ingresa un email o contraseña no válidos $\rightarrow$ El sistema muestra un mensaje de error *"Invalid credentials"* $\rightarrow$ Permanece en la pantalla de Log In habilitando la opción *"Forgot password?"*.
+    * **Email o RUC ya registrado:** Al presionar *"Create account"*, el sistema detecta redundancia en la base de datos $\rightarrow$ Muestra alerta de validación *"Email or RUC already registered"* $\rightarrow$ Destaca en rojo el campo duplicado.
+    * **Formulario incompleto:** El usuario intenta enviar el registro sin aceptar Términos o dejando campos requeridos vacíos $\rightarrow$ El botón *"Create account"* se mantiene inhabilitado o despliega mensajes contextuales *"Field required"*.
+
+---
+
+### User Flow 2: Gestión de Usuarios y Asignación de Roles (User Management)
+
+![user_flow2.png](assets/images/cap3/mock-ups/user_flow/user_flow2.png)
+
+* **User Goal:** Invitar a nuevos colaboradores a la plataforma y administrar sus permisos o estados operativos dentro de la organización.
+* **User Persona:** Administrador de Flota (Fleet Manager).
+* **Happy Path (Ruta Esperada):**
+    1. El Administrador navega a la sección **User management** desde el menú principal.
+    2. Visualiza la lista de usuarios activos registrados.
+    3. Presiona el botón azul secundario **"+ Add user"**.
+    4. Se despliega el modal emergente *"Add a new user"*.
+    5. Ingresa el correo electrónico institucional del nuevo colaborador.
+    6. Presiona el botón azul **"Add user"**.
+    7. El sistema envía una invitación por email y agrega al usuario a la lista con estado *"Active"* y rol por defecto.
+    8. El Administrador ajusta el rol (*Administrator / Driver*) o estado (*Active / Inactive*) desde los controles desplegables de la tarjeta.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Formato de email inválido:** El usuario ingresa un texto no conforme en el modal $\rightarrow$ El campo resalta con la advertencia *"Please enter a valid email address"* $\rightarrow$ Se bloquea el botón *"Add user"*.
+    * **Límite de usuarios según el Plan:** La organización ha alcanzado el número máximo de usuarios de su suscripción $\rightarrow$ Al presionar *"Add user"*, el sistema despliega un aviso modal *"User limit reached. Upgrade your plan"* con opción de ir a suscripciones.
+
+---
+
+### User Flow 3: Monitoreo y Registro de Vehículos de la Flota (Vehicles)
 
 ![user_flow3.png](assets/images/cap3/mock-ups/user_flow/user_flow3.png)
 
-- **User Flow 4 (Asignación de Almacenes a Clientes):** Representa la secuencia de decisiones del administrador para evaluar direcciones de clientes, ubicarlas en el mapa interactivo y validar si el punto se encuentra activo antes de vincularlo a rutas.
+* **User Goal:** Dar de alta unidades de transporte, consultar sus especificaciones técnicas y controlar su disponibilidad operativa.
+* **User Persona:** Administrador de Flota (Fleet Manager).
+* **Happy Path (Ruta Esperada):**
+    1. El Administrador accede a la pantalla **Vehicles**.
+    2. Presiona el botón azul secundario **"+ Register vehicle"**.
+    3. En la ventana modal, ingresa la Placa (*License plate*) y la Capacidad de carga en kg (*Load capacity*).
+    4. Presiona el CTA amarillo **"Confirm"**.
+    5. El vehículo se registra con el estado *"Enabled"* y se muestra en la lista.
+    6. Selecciona la tarjeta del vehículo registrado para abrir **Vehicle details**.
+    7. Asigna miembros del equipo de trabajo presionando *"+ Add team members"*.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Placa duplicada:** El sistema identifica que la placa ingresada ya existe en la flota $\rightarrow$ Muestra mensaje de error *"License plate already registered"*.
+    * **Inhabilitación por mantenimiento:** El Administrador necesita retirar un vehículo de la operación $\rightarrow$ En *Vehicle details*, cambia el interruptor de estado a *"Disabled"* $\rightarrow$ El sistema solicita confirmación y actualiza el distintivo visual a rojo, previniendo que sea asignado a nuevas rutas.
+
+---
+
+### User Flow 4: Gestión de Clientes y Asignación de Almacenes (Clients)
 
 ![user_flow4.png](assets/images/cap3/mock-ups/user_flow/user_flow4.png)
 
-- **User Flow 5 (Planificación Eficiente de Rutas):** Detalla las validaciones de negocio al configurar un borrador de ruta, agregar o remover puntos de entrega, seleccionar equipos disponibles y confirmar la publicación para congelar la edición de la ruta.
+* **User Goal:** Registrar clientes corporativos y configurar sus puntos geográficos de entrega/almacenes mediante interacción cartográfica.
+* **User Persona:** Administrador de Flota / Dispatcher.
+* **Happy Path (Ruta Esperada):**
+    1. El usuario ingresa a la pantalla **Clients**.
+    2. Selecciona un cliente de la lista para ver la vista **Client details**.
+    3. Visualiza el componente de mapa interactivo (*Interactive Map*) y la lista de ubicaciones asociadas (*Main Warehouse*, *North Branch*).
+    4. Presiona **"+ Register location"** o toca directamente un punto sobre el mapa interactivo.
+    5. Ajusta el pin de geolocalización, asigna un nombre a la sede (ej. *Distribution Center*) y confirma la dirección.
+    6. Presiona el botón de guardado $\rightarrow$ La nueva ubicación se registra con el badge verde *"Active"*.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Ubicación fuera de zona de cobertura:** El punto seleccionado en el mapa no cuenta con datos de geocodificación o ruta accesible $\rightarrow$ El sistema notifica *"Location outside service area"* $\rightarrow$ Solicita reubicar el pin.
+    * **Desactivación de sede:** Un almacén del cliente entra en remodelación $\rightarrow$ El usuario selecciona la sede y cambia su estado a *"Disabled"* $\rightarrow$ El sistema impide la selección de esta sede durante la planificación de rutas.
+
+---
+
+### User Flow 5: Planificación Eficiente de Rutas (Routes & Route Planning)
 
 ![user_flow5.png](assets/images/cap3/mock-ups/user_flow/user_flow5.png)
 
-- **User Flow 6 (Reporte e Historial de Incidentes):** Describe el flujo de captura de incidencias en ruta, las opciones para adjuntar evidencia fotográfica, la clasificación por gravedad y el seguimiento de estados hasta su resolución.
+* **User Goal:** Diseñar una ruta de reparto optimizada, vincular los puntos de entrega en mapa, asignar el equipo vehicular y publicar la orden de trabajo.
+* **User Persona:** Dispatcher / Planificador de Rutas.
+* **Happy Path (Ruta Esperada):**
+    1. El Dispatcher accede a **Routes** y presiona **"+ New route"**.
+    2. Selecciona el tipo de ruta y asigna un color identificador en el modal emergente.
+    3. Presiona **"Confirm"** $\rightarrow$ Se crea la ruta en estado *"Draft"* y redirige automáticamente a la pantalla de **Route planning** (pestaña activa *"Locations"*).
+    4. Utiliza el mapa interactivo para seleccionar las sedes de los clientes y agregarlas al bloque *"Selected locations"*.
+    5. Cambia a la pestaña **"Team"**.
+    6. Revisa los equipos vehiculares disponibles (mostrando conductor, acompañantes y placa) y presiona el botón **"Select"** en el equipo elegido.
+    7. Revisa el resumen operativo y presiona el CTA principal amarillo **"Publish"**.
+    8. La ruta pasa de estado *"Draft"* a *"Published"* (Badge amarillo) y se notifica al conductor asignado.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Intentar publicar sin ubicaciones o sin equipo:** El Dispatcher presiona *"Publish"* antes de agregar puntos o asignar equipo $\rightarrow$ El sistema despliega una alerta *"Route incomplete: Add at least one location and an assigned team to publish"*.
+    * **Conflicto de equipo ocupado:** El equipo vehicular seleccionado ya tiene una ruta asignada en el mismo horario $\rightarrow$ El botón *"Select"* muestra la advertencia *"Team unavailable for selected timeframe"*.
+
+---
+
+### User Flow 6: Reporte e Historial de Incidentes en Campo (Incidents)
 
 ![user_flow6.png](assets/images/cap3/mock-ups/user_flow/user_flow6.png)
 
----
+* **User Goal:** Reportar eventos imprevistos que afecten la entrega (fallas mecánicas, accidentes, entregas rechazadas) adjuntando evidencia visual para su seguimiento.
+* **User Persona:** Conductor (Driver) / Administrador.
+* **Happy Path (Ruta Esperada):**
+    1. El Conductor entra a la sección **Incidents**.
+    2. Presiona el botón **"+ Report incident"** (disponible también desde la pantalla de estado vacío *"Incidents not found"*).
+    3. Se despliega el formulario modal *"Report incident"*.
+    4. Selecciona la categoría del incidente (*Vehicle failure*, *Delivery rejected*, etc.) y establece el nivel de prioridad (*High*, *Medium*, *Low*).
+    5. Escribe una descripción detallada en el campo de texto.
+    6. Presiona **"Take a photo"** para usar la cámara o **"Upload photo"** para elegir desde la galería.
+    7. Adjunta la evidencia fotográfica y presiona el CTA amarillo **"Send report"**.
+    8. El incidente se registra inmediatamente con estado *"In review"* y aparece en el historial **Reported incidents**.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Envío sin evidencia requerida (en prioridad alta):** Si el incidente se categoriza como *"High"* y no se sube fotografía $\rightarrow$ El sistema solicita validación *"Photo evidence required for high priority incidents"*.
+    * **Cancelación del reporte:** El usuario presiona *"Cancel"* en el modal $\rightarrow$ El sistema solicita confirmación *"Discard incident report?"* $\rightarrow$ Al aceptar, borra los datos ingresados y vuelve a la vista de historial.
 
 #### 3.1.4.5. Mobile Applications Prototyping
 
