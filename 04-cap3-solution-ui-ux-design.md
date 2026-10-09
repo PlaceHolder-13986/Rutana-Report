@@ -474,13 +474,18 @@ Los diagramas de flujo de usuario (User Flows) mapean los caminos de decisión c
 
 - **User Flow 1 (Autenticación y Onboarding):** Mapea la verificación de credenciales en el inicio de sesión, la gestión de errores ante contraseñas incorrectas y la bifurcación del flujo según el tipo de registro (Administrador o Conductor).
 
+![user_flow.png](assets/images/cap3/mock-ups/user_flow/user_flow1.png)
+
 - **User Flow 2 (Gestión de Usuarios):** Modela el flujo de invitación de personal por email, la asignación de permisos según el plan contratado y la habilitación o deshabilitación de miembros de la organización.
+
+![user_flow1.png](assets/images/cap3/mock-ups/user_flow/user_flow1.png)
 
 - **User Flow 3 (Monitoreo de Flota y Vehículos):** Ilustra las decisiones para consultar fichas técnicas de unidades, modificar la placa o capacidad máxima, asignar miembros de equipo al vehículo y cambiar su estado operacional.
 
 
 - **User Flow 4 (Asignación de Almacenes a Clientes):** Representa la secuencia de decisiones del administrador para evaluar direcciones de clientes, ubicarlas en el mapa interactivo y validar si el punto se encuentra activo antes de vincularlo a rutas.
 
+![user_flow4.png](assets/images/cap3/mock-ups/user_flow/user_flow4.png)
 
 - **User Flow 5 (Planificación Eficiente de Rutas):** Detalla las validaciones de negocio al configurar un borrador de ruta, agregar o remover puntos de entrega, seleccionar equipos disponibles y confirmar la publicación para congelar la edición de la ruta.
 
