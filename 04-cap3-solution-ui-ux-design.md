@@ -482,7 +482,7 @@ Los diagramas de flujo de usuario (User Flows) mapean los caminos de decisión c
 
 - **User Flow 3 (Monitoreo de Flota y Vehículos):** Ilustra las decisiones para consultar fichas técnicas de unidades, modificar la placa o capacidad máxima, asignar miembros de equipo al vehículo y cambiar su estado operacional.
 
-
+![user_flow3.png](assets/images/cap3/mock-ups/user_flow/user_flow3.png)
 
 - **User Flow 4 (Asignación de Almacenes a Clientes):** Representa la secuencia de decisiones del administrador para evaluar direcciones de clientes, ubicarlas en el mapa interactivo y validar si el punto se encuentra activo antes de vincularlo a rutas.
 
