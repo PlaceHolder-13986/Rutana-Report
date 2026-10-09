@@ -7,13 +7,11 @@
 ### 3.1.1. Style Guidelines
 ### **Colores**
 
-![Colors](assets/images/cap%203/Colors.png)
-
+![Colors.png](assets/images/cap3/Colors.png)
 
 Amarillo-#FFD60A: El color transmite energía, atención y optimismo. Eso lo hace ideal para llamados a la acción, iconos y botones importantes, alertas y elementos que necesiten destacar.
 
 Azul Medio-#6184A6: El color expresa confianza, estabilidad y profesionalismo. perfecto para botones secundarios y resaltar estados.
-
 
 Azul Claro - #A7CEFC: El color expresa tranquilidad, innovación, claridad. Bueno para fondos, para el color cuando seleccionamos una opción o de elementos interactivos.
 
@@ -30,19 +28,17 @@ Se selecciono la tipografia "Plus Jakarta Sans" como la principal para los titul
 
 Plus Jakarta:
 
-![Plus Jakarta](assets/images/cap%203/Plus_Jakarta_Tamaños.png)
+![Plus_Jakarta_Tamaños.png](assets/images/cap3/Plus_Jakarta_Tama%C3%B1os.png)
 
 Inter:
 
-![Inter](assets/images/cap%203/Inter_Tamaños.png)
-
+![Inter_Tamaños.png](assets/images/cap3/Inter_Tama%C3%B1os.png)
 
 ### **Branding**
 
 El branding de Rutana se diesño para demostrar simpleza, profesionalidad y enfoque. El logo posee un enfoque modesto y con el significado de seguir las rutas, demostrado con las flechas direccionales, el de color blanco simbolizando el camión y las amarilla simbolizan las rutas ya definidas que se deben de realizar. 
 
-![Rutana](<assets/images/cap%203/Logo.png>)
-
+![Logo.png](assets/images/cap3/Logo.png)
 
 ### **Espaciado**  
 El diseño de Rutana se apoya en un uso estratégico del espacio en blanco, que contribuye a una experiencia de navegación fluida y organizada. Cada sección mantiene un ancho máximo que evita la sobrecarga visual y asegura que el contenido respire adecuadamente. Los márgenes alrededor de bloques de texto, imágenes y tarjetas generan equilibrio visual, mientras que los rellenos internos en botones y secciones principales permiten destacar las acciones clave. Esta distribución pensada facilita la lectura y asegura que los elementos más relevantes, como los planes, testimonios o valores de la empresa, sobresalgan con claridad.
@@ -330,11 +326,291 @@ Footer:
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
+Los wireframes móviles definen la distribución espacial y la jerarquía de los componentes en pantallas de resolución móvil estándar. Se contemplaron las vistas principales de la aplicación:
+
+**Log In y Register:** Incorpora una cabecera azul con isotipo corporativo, campos de texto estructurados con ayuda contextual y botones jerarquizados.
+
+![w-login.png](assets/images/cap3/wireframes/mobile-app/w-login.png)
+
+![w-signup.png](assets/images/cap3/wireframes/mobile-app/w-signup.png)
+
+---
+
+**Gestión de Usuarios (User Management):** Estructura de tarjetas para miembros del equipo con modales flotantes para el registro de nuevos usuarios.
+
+![w-user_m1.png](assets/images/cap3/wireframes/mobile-app/w-user_m1.png)
+
+![w-user_m2.png](assets/images/cap3/wireframes/mobile-app/w-user_m2.png)
+
+---
+
+**Gestión de Vehículos y Detalles (Vehicles):** Lista de unidades con tarjetas de capacidad, estado operacional y modal de registro de vehículos.
+
+![w-vehicles.png](assets/images/cap3/wireframes/mobile-app/w-vehicles.png)
+
+---
+
+**Gestión de Clientes y Detalle de Almacén (Clients):** Tarjetas de clientes con badges de estado e integración visual de mapa interactivo para la asignación de puntos de entrega.
+
+![w-clients.png](assets/images/cap3/wireframes/mobile-app/w-clients.png)
+
+---
+
+**Planificación de Rutas (Routes & Planning):** Flujo de creación en borrador, mapa interactivo con puntos asignados y pestañas de selección de equipos.
+
+![w-routes_planning.png](assets/images/cap3/wireframes/mobile-app/w-routes_planning.png)
+
+---
+
+**Gestión e Historial de Incidentes (Incidents):** Pantallas para lista vacía, formulario de reporte con carga de evidencia e historial categorizado por prioridad.
+
+![incidents.png](assets/images/cap3/wireframes/mobile-app/incidents.png)
+
+---
+
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
+
+Los diagramas de wireflow ilustran las secuencias de navegación e interacción entre pantallas móviles para cumplir las tareas clave del usuario (Task Flows):
+
+##### Task Flow 1: Autenticación y Registro de Usuario (Sign In & Sign Up)
+* **Objetivo:** Permitir que un nuevo usuario o cliente corporativo cree una cuenta en la plataforma o inicie sesión de manera segura para acceder al panel principal.
+* **Pasos:** Pantalla de Bienvenida / Log In $\rightarrow$ Seleccionar "Create an account" $\rightarrow$ Seleccionar Rol (Administrator / Driver) $\rightarrow$ Llenar Formulario (Nombre, Email, Teléfono, Empresa, RUC, Contraseña) $\rightarrow$ Aceptar Términos y Condiciones $\rightarrow$ Confirmar "Create account"$\rightarrow$ Redirección a Inicio de Sesión o Panel Principal.
+* **Historias de Usuario asociadas:** US01, US02, TS-IAM-001, TS-IAM-002.
+
+![wireflow1.png](assets/images/cap3/wireframes/wireflows/wireflow1.png)
+
+##### Task Flow 2: Gestión de Usuarios y Asignación de Roles (User Management)
+* **Objetivo:** Administrar a los miembros de la organización, invitar nuevos usuarios por correo electrónico y modificar sus roles o estados dentro del sistema.
+* **Pasos:** Acceder a "User management" $\rightarrow$ Visualizar lista de usuarios registrados $\rightarrow$ Buscar usuario por nombre o email $\rightarrow$ Presionar botón azul "+ Add user" $\rightarrow$ Ingresar correo institucional en el modal "Add a new user" $\rightarrow$ Confirmar "Add user" para enviar invitación $\rightarrow$ Cambiar rol o estado desde los desplegables de la tarjeta de usuario.
+* **Historias de Usuario asociadas:** US03, US04, US05, US08, TS-IAM-003.
+* 
+![wireflow2.png](assets/images/cap3/wireframes/wireflows/wireflow2.png)
+
+##### Task Flow 3: Monitoreo y Registro de Vehículos de la Flota (Vehicles)
+* **Objetivo:** Registrar vehículos de carga, consultar sus especificaciones operativas e inhabilitar o habilitar unidades según disponibilidad.
+* **Pasos:** Acceder a la vista "Vehicles" $\rightarrow$ Filtrar por placa $\rightarrow$ Abrir modal "+ Register vehicle" $\rightarrow$ Ingresar Placa (License plate) y Capacidad de carga (Load capacity) $\rightarrow$ Presionar CTA amarillo "Confirm" $\rightarrow$ Seleccionar un vehículo para ver "Vehicle details" $\rightarrow$ Asignar o remover miembros del equipo con "+ Add team members" $\rightarrow$ Editar o cambiar estado (Disabled/Enabled).
+* **Historias de Usuario asociadas:** US17, US18, TS-FLE-001, TS-FLE-002, TS-FLE-003.
+
+![wireflow3.png](assets/images/cap3/wireframes/wireflows/wireflow3.png)
+
+##### Task Flow 4: Gestión de Clientes y Asignación de Almacenes (Clients)
+* **Objetivo:** Registrar clientes corporativos y gestionar sus puntos de entrega o almacenes mediante un mapa interactivo.
+* **Pasos:** Navegar a "Clients" $\rightarrow$ Buscar por nombre o presionar "+ Register client" $\rightarrow$ Seleccionar un cliente para abrir "Client details" $\rightarrow$ Presionar "+ Register location" o interactuar directamente con "Interactive Map" $\rightarrow$ Seleccionar punto en mapa para crear/asignar almacén $\rightarrow$ Consultar lista de ubicaciones activas o inhabilitadas (Main Warehouse, North Branch).
+* **Historias de Usuario asociadas:** US09, US10, US11, US12, US13, US14, US15, TS-CRM-001, TS-CRM-002, TS-CRM-003.
+
+![wireflow4.png](assets/images/cap3/wireframes/wireflows/wireflow4.png)
+
+##### Task Flow 5: Planificación, Configuración y Publicación de Rutas (Routes & Planning)
+* **Objetivo:** Crear un borrador de ruta diaria, seleccionar los puntos de entrega en el mapa, asignar el equipo vehicular disponible y publicar la ruta definitiva.
+* **Pasos:** Vista principal de "Routes" $\rightarrow$ Filtrar por fecha planificada o presionar "+ New route" $\rightarrow$ Seleccionar Tipo y Color de identificación en el modal "New route" $\rightarrow$ Confirmar en botón amarillo $\rightarrow$ Redirección a "Route planning" (pestaña "Locations") $\rightarrow$ Buscar clientes, seleccionar puntos en el mapa y agregarlos a "Selected locations" $\rightarrow$ Cambiar a la pestaña "Team" $\rightarrow$ Elegir equipo vehicular disponible presionando "Select" $\rightarrow$ Presionar CTA amarillo "Publish" para bloquear edición y pasar la ruta a ejecución.
+* **Historias de Usuario asociadas:** US16, US19, US20, US23, US29, TS-PLA-001, TS-PLA-002, TS-PLA-003, TS-PLA-004.
+
+![wireflow5.png](assets/images/cap3/wireframes/wireflows/wireflow5.png)
+
+##### Task Flow 6: Reporte y Seguimiento de Incidentes en Campo (Incidents)
+* **Objetivo:** Permitir al transportista o administrador registrar imprevistos operativos en ruta adjuntando fotos como evidencia, y visualizar el historial de incidencias clasificadas por prioridad.
+* **Pasos:** Acceder a la sección "Incidents" (si no hay datos se muestra estado vacío "Incidents not found") $\rightarrow$ Presionar "+ Report incident" $\rightarrow$ Se despliega modal de reporte $\rightarrow$ Seleccionar Categoría (Category) y Prioridad (Priority) $\rightarrow$ Escribir descripción detallada $\rightarrow$ Cargar evidencia mediante "Take a photo" o "Upload photo" $\rightarrow$ Enviar reporte en botón amarillo "Send report" $\rightarrow$ Visualizar historial en "Reported incidents" filtrando por estado (All, In review, Resolved) y distintivos de prioridad (High, Medium, Low).
+* **Historias de Usuario asociadas:** US21, US28, US30, US32.
+
+![wireflow6.png](assets/images/cap3/wireframes/wireflows/wireflow6.png)
+---
+
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
+##### Módulo 1: Inicio de Sesión y Registro de Cuenta (Login & Register)
+Pantallas con cabecera institucional azul, isotipo corporativo, campos de entrada enriquecidos con iconografía y jerarquía clara de botones.
+
+![m-login_signup.png](assets/images/cap3/mock-ups/mobile-app/m-login_signup.png)
+
+---
+
+##### Módulo 2: Gestión de Usuarios (User Management)
+Administración de miembros de la organización con filtrado rápido y modal flotante.
+
+![m-user_m.png](assets/images/cap3/mock-ups/mobile-app/m-user_m.png)
+
+---
+
+##### Módulo 3: Gestión de Vehículos y Flota (Vehicles & Vehicle Details)
+Catálogo de unidades de transporte con tarjetas informativas de capacidad en kilogramos, indicador de estado y modal de confirmación.
+
+![m-vehicles.png](assets/images/cap3/mock-ups/mobile-app/m-vehicles.png)
+
+---
+
+##### Módulo 4: Gestión de Clientes y Puntos de Entrega (Clients & Locations)
+Registro de clientes corporativos y vinculación de almacenes mediante mapas interactivos.
+
+![m-clients.png](assets/images/cap3/mock-ups/mobile-app/m-clients.png)
+
+---
+
+##### Módulo 5: Planificación de Rutas (Routes & Route Planning)
+Módulo de creación de rutas en borrador, asignación de puntos de entrega por mapa y selección de equipos de transporte antes de publicar.
+
+![m-routes_planning.png](assets/images/cap3/mock-ups/mobile-app/m-routes_planning.png)
+
+---
+
+##### Módulo 6: Gestión e Historial de Incidentes (Incidents & Report)
+Flujo de reporte de imprevistos en ruta con categorización por prioridad y adjunto de evidencia fotográfica.
+
+![m-incidents.png](assets/images/cap3/mock-ups/mobile-app/m-incidents.png)
+
+---
+
+
+
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
+#### 3.1.4.4. Mobile Applications User Flow Diagrams
+
+Los diagramas de flujo de usuario (User Flows) mapean los caminos de decisión completos que realiza el usuario para alcanzar sus objetivos dentro del ecosistema móvil de Rutana:
+
+### User Flow 1: Autenticación y Registro de Usuario (Sign In & Sign Up)
+
+![user_flow1.png](assets/images/cap3/mock-ups/user_flow/user_flow1.png)
+
+* **User Goal:** Acceder a la plataforma con credenciales válidas o registrar una nueva cuenta corporativa para comenzar la gestión logística.
+* **User Persona:** Administrador de Flota / Conductor (Driver).
+* **Happy Path (Ruta Esperada):**
+    1. El usuario abre la aplicación y visualiza la pantalla de **Log In**.
+    2. Presiona la opción *"Create an account"*.
+    3. En la pantalla de **Register**, selecciona su rol (*Administrator* o *Driver*).
+    4. Completa los campos obligatorios: Nombre completo, Correo electrónico, Teléfono, Nombre de la empresa, RUC y Contraseña.
+    5. Marca la casilla de verificación de *Términos y Condiciones*.
+    6. Presiona el botón amarillo **"Create account"**.
+    7. El sistema valida los datos y redirige al usuario a la pantalla de **Log In** (o directamente al Dashboard principal) con su cuenta activada.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Credenciales incorrectas en Log In:** El usuario ingresa un email o contraseña no válidos $\rightarrow$ El sistema muestra un mensaje de error *"Invalid credentials"* $\rightarrow$ Permanece en la pantalla de Log In habilitando la opción *"Forgot password?"*.
+    * **Email o RUC ya registrado:** Al presionar *"Create account"*, el sistema detecta redundancia en la base de datos $\rightarrow$ Muestra alerta de validación *"Email or RUC already registered"* $\rightarrow$ Destaca en rojo el campo duplicado.
+    * **Formulario incompleto:** El usuario intenta enviar el registro sin aceptar Términos o dejando campos requeridos vacíos $\rightarrow$ El botón *"Create account"* se mantiene inhabilitado o despliega mensajes contextuales *"Field required"*.
+
+---
+
+### User Flow 2: Gestión de Usuarios y Asignación de Roles (User Management)
+
+![user_flow2.png](assets/images/cap3/mock-ups/user_flow/user_flow2.png)
+
+* **User Goal:** Invitar a nuevos colaboradores a la plataforma y administrar sus permisos o estados operativos dentro de la organización.
+* **User Persona:** Administrador de Flota (Fleet Manager).
+* **Happy Path (Ruta Esperada):**
+    1. El Administrador navega a la sección **User management** desde el menú principal.
+    2. Visualiza la lista de usuarios activos registrados.
+    3. Presiona el botón azul secundario **"+ Add user"**.
+    4. Se despliega el modal emergente *"Add a new user"*.
+    5. Ingresa el correo electrónico institucional del nuevo colaborador.
+    6. Presiona el botón azul **"Add user"**.
+    7. El sistema envía una invitación por email y agrega al usuario a la lista con estado *"Active"* y rol por defecto.
+    8. El Administrador ajusta el rol (*Administrator / Driver*) o estado (*Active / Inactive*) desde los controles desplegables de la tarjeta.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Formato de email inválido:** El usuario ingresa un texto no conforme en el modal $\rightarrow$ El campo resalta con la advertencia *"Please enter a valid email address"* $\rightarrow$ Se bloquea el botón *"Add user"*.
+    * **Límite de usuarios según el Plan:** La organización ha alcanzado el número máximo de usuarios de su suscripción $\rightarrow$ Al presionar *"Add user"*, el sistema despliega un aviso modal *"User limit reached. Upgrade your plan"* con opción de ir a suscripciones.
+
+---
+
+### User Flow 3: Monitoreo y Registro de Vehículos de la Flota (Vehicles)
+
+![user_flow3.png](assets/images/cap3/mock-ups/user_flow/user_flow3.png)
+
+* **User Goal:** Dar de alta unidades de transporte, consultar sus especificaciones técnicas y controlar su disponibilidad operativa.
+* **User Persona:** Administrador de Flota (Fleet Manager).
+* **Happy Path (Ruta Esperada):**
+    1. El Administrador accede a la pantalla **Vehicles**.
+    2. Presiona el botón azul secundario **"+ Register vehicle"**.
+    3. En la ventana modal, ingresa la Placa (*License plate*) y la Capacidad de carga en kg (*Load capacity*).
+    4. Presiona el CTA amarillo **"Confirm"**.
+    5. El vehículo se registra con el estado *"Enabled"* y se muestra en la lista.
+    6. Selecciona la tarjeta del vehículo registrado para abrir **Vehicle details**.
+    7. Asigna miembros del equipo de trabajo presionando *"+ Add team members"*.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Placa duplicada:** El sistema identifica que la placa ingresada ya existe en la flota $\rightarrow$ Muestra mensaje de error *"License plate already registered"*.
+    * **Inhabilitación por mantenimiento:** El Administrador necesita retirar un vehículo de la operación $\rightarrow$ En *Vehicle details*, cambia el interruptor de estado a *"Disabled"* $\rightarrow$ El sistema solicita confirmación y actualiza el distintivo visual a rojo, previniendo que sea asignado a nuevas rutas.
+
+---
+
+### User Flow 4: Gestión de Clientes y Asignación de Almacenes (Clients)
+
+![user_flow4.png](assets/images/cap3/mock-ups/user_flow/user_flow4.png)
+
+* **User Goal:** Registrar clientes corporativos y configurar sus puntos geográficos de entrega/almacenes mediante interacción cartográfica.
+* **User Persona:** Administrador de Flota / Dispatcher.
+* **Happy Path (Ruta Esperada):**
+    1. El usuario ingresa a la pantalla **Clients**.
+    2. Selecciona un cliente de la lista para ver la vista **Client details**.
+    3. Visualiza el componente de mapa interactivo (*Interactive Map*) y la lista de ubicaciones asociadas (*Main Warehouse*, *North Branch*).
+    4. Presiona **"+ Register location"** o toca directamente un punto sobre el mapa interactivo.
+    5. Ajusta el pin de geolocalización, asigna un nombre a la sede (ej. *Distribution Center*) y confirma la dirección.
+    6. Presiona el botón de guardado $\rightarrow$ La nueva ubicación se registra con el badge verde *"Active"*.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Ubicación fuera de zona de cobertura:** El punto seleccionado en el mapa no cuenta con datos de geocodificación o ruta accesible $\rightarrow$ El sistema notifica *"Location outside service area"* $\rightarrow$ Solicita reubicar el pin.
+    * **Desactivación de sede:** Un almacén del cliente entra en remodelación $\rightarrow$ El usuario selecciona la sede y cambia su estado a *"Disabled"* $\rightarrow$ El sistema impide la selección de esta sede durante la planificación de rutas.
+
+---
+
+### User Flow 5: Planificación Eficiente de Rutas (Routes & Route Planning)
+
+![user_flow5.png](assets/images/cap3/mock-ups/user_flow/user_flow5.png)
+
+* **User Goal:** Diseñar una ruta de reparto optimizada, vincular los puntos de entrega en mapa, asignar el equipo vehicular y publicar la orden de trabajo.
+* **User Persona:** Dispatcher / Planificador de Rutas.
+* **Happy Path (Ruta Esperada):**
+    1. El Dispatcher accede a **Routes** y presiona **"+ New route"**.
+    2. Selecciona el tipo de ruta y asigna un color identificador en el modal emergente.
+    3. Presiona **"Confirm"** $\rightarrow$ Se crea la ruta en estado *"Draft"* y redirige automáticamente a la pantalla de **Route planning** (pestaña activa *"Locations"*).
+    4. Utiliza el mapa interactivo para seleccionar las sedes de los clientes y agregarlas al bloque *"Selected locations"*.
+    5. Cambia a la pestaña **"Team"**.
+    6. Revisa los equipos vehiculares disponibles (mostrando conductor, acompañantes y placa) y presiona el botón **"Select"** en el equipo elegido.
+    7. Revisa el resumen operativo y presiona el CTA principal amarillo **"Publish"**.
+    8. La ruta pasa de estado *"Draft"* a *"Published"* (Badge amarillo) y se notifica al conductor asignado.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Intentar publicar sin ubicaciones o sin equipo:** El Dispatcher presiona *"Publish"* antes de agregar puntos o asignar equipo $\rightarrow$ El sistema despliega una alerta *"Route incomplete: Add at least one location and an assigned team to publish"*.
+    * **Conflicto de equipo ocupado:** El equipo vehicular seleccionado ya tiene una ruta asignada en el mismo horario $\rightarrow$ El botón *"Select"* muestra la advertencia *"Team unavailable for selected timeframe"*.
+
+---
+
+### User Flow 6: Reporte e Historial de Incidentes en Campo (Incidents)
+
+![user_flow6.png](assets/images/cap3/mock-ups/user_flow/user_flow6.png)
+
+* **User Goal:** Reportar eventos imprevistos que afecten la entrega (fallas mecánicas, accidentes, entregas rechazadas) adjuntando evidencia visual para su seguimiento.
+* **User Persona:** Conductor (Driver) / Administrador.
+* **Happy Path (Ruta Esperada):**
+    1. El Conductor entra a la sección **Incidents**.
+    2. Presiona el botón **"+ Report incident"** (disponible también desde la pantalla de estado vacío *"Incidents not found"*).
+    3. Se despliega el formulario modal *"Report incident"*.
+    4. Selecciona la categoría del incidente (*Vehicle failure*, *Delivery rejected*, etc.) y establece el nivel de prioridad (*High*, *Medium*, *Low*).
+    5. Escribe una descripción detallada en el campo de texto.
+    6. Presiona **"Take a photo"** para usar la cámara o **"Upload photo"** para elegir desde la galería.
+    7. Adjunta la evidencia fotográfica y presiona el CTA amarillo **"Send report"**.
+    8. El incidente se registra inmediatamente con estado *"In review"* y aparece en el historial **Reported incidents**.
+* **Unhappy Paths (Rutas Alternativas y Excepciones):**
+    * **Envío sin evidencia requerida (en prioridad alta):** Si el incidente se categoriza como *"High"* y no se sube fotografía $\rightarrow$ El sistema solicita validación *"Photo evidence required for high priority incidents"*.
+    * **Cancelación del reporte:** El usuario presiona *"Cancel"* en el modal $\rightarrow$ El sistema solicita confirmación *"Discard incident report?"* $\rightarrow$ Al aceptar, borra los datos ingresados y vuelve a la vista de historial.
+
 #### 3.1.4.5. Mobile Applications Prototyping
+
+##### Introducción y Criterios de Decisión de Interacción
+El desarrollo de los prototipos interactivos de alta fidelidad para la aplicación móvil de Rutana responde directamente a la arquitectura de información y a los flujos trazados en los diagramas de *User Flow*. Las decisiones de diseño de interfaz (UI) e interacción (UX) se fundamentaron en tres pilares clave:
+
+1. **Sistema de Navegación Global y Jerarquía:**
+    * **Menú Lateral (Navigation Drawer):** Se implementó un menú desplegable accesible desde el ícono de hamburguesa en la barra superior (*Top App Bar*), permitiendo un acceso rápido y directo a las secciones principales del sistema (*User management*, *Vehicles*, *Clients*, *Routes*, *Incidents*).
+    * **Navegación Basada en Pestañas (Tabs):** En vistas complejas como *Route planning*, se utilizó una estructura de pestañas (*Locations* y *Team*) para dividir secuencialmente las tareas de selección geográfica y asignación de recursos sin saturar la pantalla.
+
+2. **Tipos de Interacciones y Componentes UI:**
+    * **Retroalimentación Visual Inmediata:** Uso de un código de colores estandarizado para estados operativos (Verde para *Active/Enabled*, Amarillo para *Published/Draft*, Rojo para *Disabled/High Priority*).
+    * **Modales Contextuales y Bottom Sheets:** Para tareas de registro rápido o entrada de datos (p. ej., *Add user*, *Register vehicle*, *New route*, *Report incident*), se emplearon modales emergentes y *Bottom Sheets*. Esto evita la pérdida de contexto del usuario y minimiza la carga cognitiva al no requerir recargas completas de pantalla.
+    * **Interacción Cartográfica Directa:** Integración de un mapa interactivo con funcionalidad *tap-to-place* para la asignación y geolocalización precisa de almacenes y puntos de entrega.
+    * **Botonera y Llamados a la Acción (CTAs):** Jerarquización mediante botones primarios en tono amarillo distintivo (`#FFD60A`) para acciones definitivas de alto impacto (ej. *Publish*, *Send report*) y botones secundarios azules (`#043873`) para acciones de creación intermedias (ej. *+ Register location*, *+ Add user*).
+
+---
+
+##### Demostración y Simulación de Prototipos Interactivos
+
+A continuación, se presentan las evidencias de la simulación de interacción y navegación correspondiente a la aplicación móvil de Rutana. Los videos de demostración detallan el recorrido del *Happy Path* y manejo de excepciones expuestos en los *User Flows*.
+
+| Aplicación / Módulo | Descripción de la Simulación de Interacción | Captura de Pantalla (Video Screenshot) | Enlace a Demostración (Microsoft Stream) |
+| :--- | :--- | :---: | :---: |
+| **Rutana Mobile App (Driver & Manager)** | Simulación completa que abarca el flujo de autenticación, gestión de flota, registro cartográfico de clientes, configuración y publicación de rutas, y reporte de incidentes con evidencia fotográfica. | ![rutana_prototype_login.png](assets/images/cap3/rutana_prototype_login.png) |  |
 
