@@ -263,6 +263,34 @@ Este sistema de navegación es intuitivo y efectivo porque no solo le dice al us
 
 Los wireframes de baja fidelidad estructuran el contenido de la landing page en una secuencia vertical orientada a la conversión de usuarios, definiendo la disposición de bloques para encabezado, propuesta de valor, características, equipo, planes y pie de página.
 
+Inicio:
+
+![Home.png](assets/images/cap3/wireframes/landing_page/Home.png)
+
+Características:
+
+![feature.png](assets/images/cap3/wireframes/landing_page/feature.png)
+
+Sobre nosotros:
+
+![our_team.png](assets/images/cap3/wireframes/landing_page/our_team.png)
+
+Nuestro equipo:
+
+![our_team.png](assets/images/cap3/wireframes/landing_page/our_team.png)
+
+Planes:
+
+![plans.png](assets/images/cap3/wireframes/landing_page/plans.png)
+
+Testimonios:
+
+![testimonials.png](assets/images/cap3/wireframes/landing_page/testimonials.png)
+
+Footer:
+
+![footer.png](assets/images/cap3/wireframes/landing_page/footer.png)
+
 
 #### 3.1.3.2. Landing Page Mock-up
 
