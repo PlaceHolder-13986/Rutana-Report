@@ -411,7 +411,6 @@ Los diagramas de wireflow ilustran las secuencias de navegación e interacción 
 
 ![wireflow5.png](assets/images/cap3/wireframes/wireflows/wireflow5.png)
 
-
 ##### Task Flow 6: Reporte y Seguimiento de Incidentes en Campo (Incidents)
 * **Objetivo:** Permitir al transportista o administrador registrar imprevistos operativos en ruta adjuntando fotos como evidencia, y visualizar el historial de incidencias clasificadas por prioridad.
 * **Pasos:** Acceder a la sección "Incidents" (si no hay datos se muestra estado vacío "Incidents not found") $\rightarrow$ Presionar "+ Report incident" $\rightarrow$ Se despliega modal de reporte $\rightarrow$ Seleccionar Categoría (Category) y Prioridad (Priority) $\rightarrow$ Escribir descripción detallada $\rightarrow$ Cargar evidencia mediante "Take a photo" o "Upload photo" $\rightarrow$ Enviar reporte en botón amarillo "Send report" $\rightarrow$ Visualizar historial en "Reported incidents" filtrando por estado (All, In review, Resolved) y distintivos de prioridad (High, Medium, Low).
@@ -468,6 +467,25 @@ Flujo de reporte de imprevistos en ruta con categorización por prioridad y adju
 
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
+
+#### 3.1.4.4. Mobile Applications User Flow Diagrams
+
+Los diagramas de flujo de usuario (User Flows) mapean los caminos de decisión completos que realiza el usuario para alcanzar sus objetivos dentro del ecosistema móvil de Rutana:
+
+- **User Flow 1 (Autenticación y Onboarding):** Mapea la verificación de credenciales en el inicio de sesión, la gestión de errores ante contraseñas incorrectas y la bifurcación del flujo según el tipo de registro (Administrador o Conductor).
+
+- **User Flow 2 (Gestión de Usuarios):** Modela el flujo de invitación de personal por email, la asignación de permisos según el plan contratado y la habilitación o deshabilitación de miembros de la organización.
+
+- **User Flow 3 (Monitoreo de Flota y Vehículos):** Ilustra las decisiones para consultar fichas técnicas de unidades, modificar la placa o capacidad máxima, asignar miembros de equipo al vehículo y cambiar su estado operacional.
+
+
+- **User Flow 4 (Asignación de Almacenes a Clientes):** Representa la secuencia de decisiones del administrador para evaluar direcciones de clientes, ubicarlas en el mapa interactivo y validar si el punto se encuentra activo antes de vincularlo a rutas.
+
+
+- **User Flow 5 (Planificación Eficiente de Rutas):** Detalla las validaciones de negocio al configurar un borrador de ruta, agregar o remover puntos de entrega, seleccionar equipos disponibles y confirmar la publicación para congelar la edición de la ruta.
+
+
+- **User Flow 6 (Reporte e Historial de Incidentes):** Describe el flujo de captura de incidencias en ruta, las opciones para adjuntar evidencia fotográfica, la clasificación por gravedad y el seguimiento de estados hasta su resolución.
 
 #### 3.1.4.5. Mobile Applications Prototyping
 
