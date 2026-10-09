@@ -595,3 +595,26 @@ Los diagramas de flujo de usuario (User Flows) mapean los caminos de decisión c
 
 #### 3.1.4.5. Mobile Applications Prototyping
 
+##### Introducción y Criterios de Decisión de Interacción
+El desarrollo de los prototipos interactivos de alta fidelidad para la aplicación móvil de Rutana responde directamente a la arquitectura de información y a los flujos trazados en los diagramas de *User Flow*. Las decisiones de diseño de interfaz (UI) e interacción (UX) se fundamentaron en tres pilares clave:
+
+1. **Sistema de Navegación Global y Jerarquía:**
+    * **Menú Lateral (Navigation Drawer):** Se implementó un menú desplegable accesible desde el ícono de hamburguesa en la barra superior (*Top App Bar*), permitiendo un acceso rápido y directo a las secciones principales del sistema (*User management*, *Vehicles*, *Clients*, *Routes*, *Incidents*).
+    * **Navegación Basada en Pestañas (Tabs):** En vistas complejas como *Route planning*, se utilizó una estructura de pestañas (*Locations* y *Team*) para dividir secuencialmente las tareas de selección geográfica y asignación de recursos sin saturar la pantalla.
+
+2. **Tipos de Interacciones y Componentes UI:**
+    * **Retroalimentación Visual Inmediata:** Uso de un código de colores estandarizado para estados operativos (Verde para *Active/Enabled*, Amarillo para *Published/Draft*, Rojo para *Disabled/High Priority*).
+    * **Modales Contextuales y Bottom Sheets:** Para tareas de registro rápido o entrada de datos (p. ej., *Add user*, *Register vehicle*, *New route*, *Report incident*), se emplearon modales emergentes y *Bottom Sheets*. Esto evita la pérdida de contexto del usuario y minimiza la carga cognitiva al no requerir recargas completas de pantalla.
+    * **Interacción Cartográfica Directa:** Integración de un mapa interactivo con funcionalidad *tap-to-place* para la asignación y geolocalización precisa de almacenes y puntos de entrega.
+    * **Botonera y Llamados a la Acción (CTAs):** Jerarquización mediante botones primarios en tono amarillo distintivo (`#FFD60A`) para acciones definitivas de alto impacto (ej. *Publish*, *Send report*) y botones secundarios azules (`#043873`) para acciones de creación intermedias (ej. *+ Register location*, *+ Add user*).
+
+---
+
+##### Demostración y Simulación de Prototipos Interactivos
+
+A continuación, se presentan las evidencias de la simulación de interacción y navegación correspondiente a la aplicación móvil de Rutana. Los videos de demostración detallan el recorrido del *Happy Path* y manejo de excepciones expuestos en los *User Flows*.
+
+| Aplicación / Módulo | Descripción de la Simulación de Interacción | Captura de Pantalla (Video Screenshot) | Enlace a Demostración (Microsoft Stream) |
+| :--- | :--- | :---: | :---: |
+| **Rutana Mobile App (Driver & Manager)** | Simulación completa que abarca el flujo de autenticación, gestión de flota, registro cartográfico de clientes, configuración y publicación de rutas, y reporte de incidentes con evidencia fotográfica. | ![rutana_prototype_login.png](assets/images/cap3/rutana_prototype_login.png) |  |
+
