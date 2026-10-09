@@ -330,7 +330,50 @@ Footer:
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
+Los wireframes móviles definen la distribución espacial y la jerarquía de los componentes en pantallas de resolución móvil estándar. Se contemplaron las vistas principales de la aplicación:
+
+**Log In y Register:** Incorpora una cabecera azul con isotipo corporativo, campos de texto estructurados con ayuda contextual y botones jerarquizados.
+
+![w-login.png](assets/images/cap3/wireframes/mobile-app/w-login.png)
+
+![w-signup.png](assets/images/cap3/wireframes/mobile-app/w-signup.png)
+
+---
+
+**Gestión de Usuarios (User Management):** Estructura de tarjetas para miembros del equipo con modales flotantes para el registro de nuevos usuarios.
+
+![w-user_m1.png](assets/images/cap3/wireframes/mobile-app/w-user_m1.png)
+
+![w-user_m2.png](assets/images/cap3/wireframes/mobile-app/w-user_m2.png)
+
+---
+
+**Gestión de Vehículos y Detalles (Vehicles):** Lista de unidades con tarjetas de capacidad, estado operacional y modal de registro de vehículos.
+
+![w-vehicles.png](assets/images/cap3/wireframes/mobile-app/w-vehicles.png)
+
+---
+
+**Gestión de Clientes y Detalle de Almacén (Clients):** Tarjetas de clientes con badges de estado e integración visual de mapa interactivo para la asignación de puntos de entrega.
+
+![w-clients.png](assets/images/cap3/wireframes/mobile-app/w-clients.png)
+
+---
+
+**Planificación de Rutas (Routes & Planning):** Flujo de creación en borrador, mapa interactivo con puntos asignados y pestañas de selección de equipos.
+
+![w-routes_planning.png](assets/images/cap3/wireframes/mobile-app/w-routes_planning.png)
+
+---
+
+**Gestión e Historial de Incidentes (Incidents):** Pantallas para lista vacía, formulario de reporte con carga de evidencia e historial categorizado por prioridad.
+
+![incidents.png](assets/images/cap3/wireframes/mobile-app/incidents.png)
+
+---
+
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
+
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
