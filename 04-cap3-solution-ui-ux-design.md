@@ -489,8 +489,11 @@ Los diagramas de flujo de usuario (User Flows) mapean los caminos de decisión c
 
 - **User Flow 5 (Planificación Eficiente de Rutas):** Detalla las validaciones de negocio al configurar un borrador de ruta, agregar o remover puntos de entrega, seleccionar equipos disponibles y confirmar la publicación para congelar la edición de la ruta.
 
+- ![user_flow5.png](assets/images/cap3/mock-ups/user_flow/user_flow5.png)
 
 - **User Flow 6 (Reporte e Historial de Incidentes):** Describe el flujo de captura de incidencias en ruta, las opciones para adjuntar evidencia fotográfica, la clasificación por gravedad y el seguimiento de estados hasta su resolución.
+
+
 
 #### 3.1.4.5. Mobile Applications Prototyping
 
