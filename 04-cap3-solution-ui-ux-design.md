@@ -294,6 +294,38 @@ Footer:
 
 #### 3.1.3.2. Landing Page Mock-up
 
+Los mockups de alta fidelidad aplican la paleta cromática oficial, incorporando el azul intenso en secciones institucionales y botones amarillos para maximizar la tasa de interacción en los llamados a la acción ("Get Started", "Try free trial").
+
+Inicio:
+
+![lp-home.png](assets/images/cap3/mock-ups/lp-home.png)
+
+Características:
+
+![lp-feature.png](assets/images/cap3/mock-ups/lp-feature.png)
+
+Sobre nosotros:
+
+![lp-about_us.png](assets/images/cap3/mock-ups/lp-about_us.png)
+
+Nuestro equipo:
+
+![lp-our_team.png](assets/images/cap3/mock-ups/lp-our_team.png)
+
+Planes:
+
+![lp-plans.png](assets/images/cap3/mock-ups/lp-plans.png)
+
+Testimonios:
+
+![lp-testimonials.png](assets/images/cap3/mock-ups/lp-testimonials.png)
+
+Footer:
+
+![lp-footer.png](assets/images/cap3/mock-ups/lp-footer.png)
+
+---
+
 ### 3.1.4. Mobile Applications UX/UI Design
 
 #### 3.1.4.1. Mobile Applications Wireframes
