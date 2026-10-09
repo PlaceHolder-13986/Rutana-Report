@@ -7,13 +7,11 @@
 ### 3.1.1. Style Guidelines
 ### **Colores**
 
-![Colors](assets/images/cap%203/Colors.png)
-
+![Colors.png](assets/images/cap3/Colors.png)
 
 Amarillo-#FFD60A: El color transmite energía, atención y optimismo. Eso lo hace ideal para llamados a la acción, iconos y botones importantes, alertas y elementos que necesiten destacar.
 
 Azul Medio-#6184A6: El color expresa confianza, estabilidad y profesionalismo. perfecto para botones secundarios y resaltar estados.
-
 
 Azul Claro - #A7CEFC: El color expresa tranquilidad, innovación, claridad. Bueno para fondos, para el color cuando seleccionamos una opción o de elementos interactivos.
 
@@ -30,19 +28,17 @@ Se selecciono la tipografia "Plus Jakarta Sans" como la principal para los titul
 
 Plus Jakarta:
 
-![Plus Jakarta](assets/images/cap%203/Plus_Jakarta_Tamaños.png)
+![Plus_Jakarta_Tamaños.png](assets/images/cap3/Plus_Jakarta_Tama%C3%B1os.png)
 
 Inter:
 
-![Inter](assets/images/cap%203/Inter_Tamaños.png)
-
+![Inter_Tamaños.png](assets/images/cap3/Inter_Tama%C3%B1os.png)
 
 ### **Branding**
 
 El branding de Rutana se diesño para demostrar simpleza, profesionalidad y enfoque. El logo posee un enfoque modesto y con el significado de seguir las rutas, demostrado con las flechas direccionales, el de color blanco simbolizando el camión y las amarilla simbolizan las rutas ya definidas que se deben de realizar. 
 
-![Rutana](<assets/images/cap%203/Logo.png>)
-
+![Logo.png](assets/images/cap3/Logo.png)
 
 ### **Espaciado**  
 El diseño de Rutana se apoya en un uso estratégico del espacio en blanco, que contribuye a una experiencia de navegación fluida y organizada. Cada sección mantiene un ancho máximo que evita la sobrecarga visual y asegura que el contenido respire adecuadamente. Los márgenes alrededor de bloques de texto, imágenes y tarjetas generan equilibrio visual, mientras que los rellenos internos en botones y secciones principales permiten destacar las acciones clave. Esta distribución pensada facilita la lectura y asegura que los elementos más relevantes, como los planes, testimonios o valores de la empresa, sobresalgan con claridad.
