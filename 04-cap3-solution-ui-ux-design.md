@@ -377,6 +377,50 @@ Los wireframes móviles definen la distribución espacial y la jerarquía de los
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
+##### Módulo 1: Inicio de Sesión y Registro de Cuenta (Login & Register)
+Pantallas con cabecera institucional azul, isotipo corporativo, campos de entrada enriquecidos con iconografía y jerarquía clara de botones.
+
+![m-login_signup.png](assets/images/cap3/mock-ups/mobile-app/m-login_signup.png)
+
+---
+
+##### Módulo 2: Gestión de Usuarios (User Management)
+Administración de miembros de la organización con filtrado rápido y modal flotante.
+
+![m-user_m.png](assets/images/cap3/mock-ups/mobile-app/m-user_m.png)
+
+---
+
+##### Módulo 3: Gestión de Vehículos y Flota (Vehicles & Vehicle Details)
+Catálogo de unidades de transporte con tarjetas informativas de capacidad en kilogramos, indicador de estado y modal de confirmación.
+
+![m-vehicles.png](assets/images/cap3/mock-ups/mobile-app/m-vehicles.png)
+
+---
+
+##### Módulo 4: Gestión de Clientes y Puntos de Entrega (Clients & Locations)
+Registro de clientes corporativos y vinculación de almacenes mediante mapas interactivos.
+
+![m-clients.png](assets/images/cap3/mock-ups/mobile-app/m-clients.png)
+
+---
+
+##### Módulo 5: Planificación de Rutas (Routes & Route Planning)
+Módulo de creación de rutas en borrador, asignación de puntos de entrega por mapa y selección de equipos de transporte antes de publicar.
+
+![m-routes_planning.png](assets/images/cap3/mock-ups/mobile-app/m-routes_planning.png)
+
+---
+
+##### Módulo 6: Gestión e Historial de Incidentes (Incidents & Report)
+Flujo de reporte de imprevistos en ruta con categorización por prioridad y adjunto de evidencia fotográfica.
+
+![m-incidents.png](assets/images/cap3/mock-ups/mobile-app/m-incidents.png)
+
+---
+
+
+
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
 #### 3.1.4.5. Mobile Applications Prototyping
