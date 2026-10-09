@@ -107,6 +107,23 @@ Localidades: Lista de las localidades del negocio y su estado. Permite asignarle
 
 Equipos: Listado de los vehiculos y el personal que lo operan. Sirve para seleccionar los equipos disponibles para que vayan a la ubicación destino.
 
+#### 3. Aplicación Móvil:
+
+Log In / Register: Acceso y creación de cuenta corporativa.
+
+Usuarios (User Management): Control de acceso y asignación de roles.
+
+Vehículos (Vehicles): Gestión de la flota vehicular y capacidades de carga.
+
+Clientes (Clients): Registro de clientes frecuentes y sus almacenes/puntos de entrega.
+
+Rutas (Routes): Planificación, programación y publicación de rutas de distribución.
+
+Planificación de Ruta (Route Planning): Selección de ubicaciones y asignación de equipos de trabajo.
+
+Incidentes (Incidents): Reporte y seguimiento de eventos en campo con evidencia fotográfica.
+
+
 #### 3.1.2.3. SEO Tags and Meta Tags
 
 ### 1. Landing Page
@@ -237,11 +254,16 @@ El sistema de navegación de esta landing page está meticulosamente diseñado p
 
 El diseño utiliza el desplazamiento vertical como el principal mecanismo de navegación. El contenido está estructurado en secciones que cuentan una historia lógica. La primera sección presenta el problema y la solución. A continuación, la sección de "Features" desglosa la propuesta de valor con un enfoque en las ventajas clave, como la gestión de rutas, lo que ayuda al usuario a visualizar cómo el producto puede resolver sus problemas. Finalmente, la sección "About us" busca construir una conexión personal, presentando la misión, la visión, los valores y quienes conforman la empresa.
 
+La navegación de la aplicación móvil se estructura mediante una barra superior (App Bar) persistente que indica el módulo activo y proporciona acceso al perfil de usuario o navegación hacia atrás. En flujos modales y de detalle, se utilizan barras de pestañas superiores (Tabs) para alternar fluidamente entre vistas complementarias (ej. Ubicaciones vs. Equipos en la planificación de rutas).
+
 Este sistema de navegación es intuitivo y efectivo porque no solo le dice al usuario dónde ir, sino que también le muestra por qué debería hacerlo. El diseño de la página anticipa las preguntas y objeciones más comunes y las aborda en un orden lógico, guiando al visitante desde una simple curiosidad hasta la acción de convertirse en un usuario registrado. Esta estructura bien pensada demuestra una arquitectura de información que va más allá de la simple página de inicio para abarcar un recorrido completo del usuario dentro del ecosistema del producto.
 ### 3.1.3. Landing Page UI Design
 
 #### 3.1.3.1. Landing Page Wireframe
- 
+
+Los wireframes de baja fidelidad estructuran el contenido de la landing page en una secuencia vertical orientada a la conversión de usuarios, definiendo la disposición de bloques para encabezado, propuesta de valor, características, equipo, planes y pie de página.
+
+
 #### 3.1.3.2. Landing Page Mock-up
 
 ### 3.1.4. Mobile Applications UX/UI Design
