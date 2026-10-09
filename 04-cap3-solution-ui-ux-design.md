@@ -374,6 +374,52 @@ Los wireframes móviles definen la distribución espacial y la jerarquía de los
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
+Los diagramas de wireflow ilustran las secuencias de navegación e interacción entre pantallas móviles para cumplir las tareas clave del usuario (Task Flows):
+
+##### Task Flow 1: Autenticación y Registro de Usuario (Sign In & Sign Up)
+* **Objetivo:** Permitir que un nuevo usuario o cliente corporativo cree una cuenta en la plataforma o inicie sesión de manera segura para acceder al panel principal.
+* **Pasos:** Pantalla de Bienvenida / Log In $\rightarrow$ Seleccionar "Create an account" $\rightarrow$ Seleccionar Rol (Administrator / Driver) $\rightarrow$ Llenar Formulario (Nombre, Email, Teléfono, Empresa, RUC, Contraseña) $\rightarrow$ Aceptar Términos y Condiciones $\rightarrow$ Confirmar "Create account"$\rightarrow$ Redirección a Inicio de Sesión o Panel Principal.
+* **Historias de Usuario asociadas:** US01, US02, TS-IAM-001, TS-IAM-002.
+
+![wireflow1.png](assets/images/cap3/wireframes/wireflows/wireflow1.png)
+
+##### Task Flow 2: Gestión de Usuarios y Asignación de Roles (User Management)
+* **Objetivo:** Administrar a los miembros de la organización, invitar nuevos usuarios por correo electrónico y modificar sus roles o estados dentro del sistema.
+* **Pasos:** Acceder a "User management" $\rightarrow$ Visualizar lista de usuarios registrados $\rightarrow$ Buscar usuario por nombre o email $\rightarrow$ Presionar botón azul "+ Add user" $\rightarrow$ Ingresar correo institucional en el modal "Add a new user" $\rightarrow$ Confirmar "Add user" para enviar invitación $\rightarrow$ Cambiar rol o estado desde los desplegables de la tarjeta de usuario.
+* **Historias de Usuario asociadas:** US03, US04, US05, US08, TS-IAM-003.
+* 
+![wireflow2.png](assets/images/cap3/wireframes/wireflows/wireflow2.png)
+
+##### Task Flow 3: Monitoreo y Registro de Vehículos de la Flota (Vehicles)
+* **Objetivo:** Registrar vehículos de carga, consultar sus especificaciones operativas e inhabilitar o habilitar unidades según disponibilidad.
+* **Pasos:** Acceder a la vista "Vehicles" $\rightarrow$ Filtrar por placa $\rightarrow$ Abrir modal "+ Register vehicle" $\rightarrow$ Ingresar Placa (License plate) y Capacidad de carga (Load capacity) $\rightarrow$ Presionar CTA amarillo "Confirm" $\rightarrow$ Seleccionar un vehículo para ver "Vehicle details" $\rightarrow$ Asignar o remover miembros del equipo con "+ Add team members" $\rightarrow$ Editar o cambiar estado (Disabled/Enabled).
+* **Historias de Usuario asociadas:** US17, US18, TS-FLE-001, TS-FLE-002, TS-FLE-003.
+
+![wireflow3.png](assets/images/cap3/wireframes/wireflows/wireflow3.png)
+
+##### Task Flow 4: Gestión de Clientes y Asignación de Almacenes (Clients)
+* **Objetivo:** Registrar clientes corporativos y gestionar sus puntos de entrega o almacenes mediante un mapa interactivo.
+* **Pasos:** Navegar a "Clients" $\rightarrow$ Buscar por nombre o presionar "+ Register client" $\rightarrow$ Seleccionar un cliente para abrir "Client details" $\rightarrow$ Presionar "+ Register location" o interactuar directamente con "Interactive Map" $\rightarrow$ Seleccionar punto en mapa para crear/asignar almacén $\rightarrow$ Consultar lista de ubicaciones activas o inhabilitadas (Main Warehouse, North Branch).
+* **Historias de Usuario asociadas:** US09, US10, US11, US12, US13, US14, US15, TS-CRM-001, TS-CRM-002, TS-CRM-003.
+
+![wireflow4.png](assets/images/cap3/wireframes/wireflows/wireflow4.png)
+
+##### Task Flow 5: Planificación, Configuración y Publicación de Rutas (Routes & Planning)
+* **Objetivo:** Crear un borrador de ruta diaria, seleccionar los puntos de entrega en el mapa, asignar el equipo vehicular disponible y publicar la ruta definitiva.
+* **Pasos:** Vista principal de "Routes" $\rightarrow$ Filtrar por fecha planificada o presionar "+ New route" $\rightarrow$ Seleccionar Tipo y Color de identificación en el modal "New route" $\rightarrow$ Confirmar en botón amarillo $\rightarrow$ Redirección a "Route planning" (pestaña "Locations") $\rightarrow$ Buscar clientes, seleccionar puntos en el mapa y agregarlos a "Selected locations" $\rightarrow$ Cambiar a la pestaña "Team" $\rightarrow$ Elegir equipo vehicular disponible presionando "Select" $\rightarrow$ Presionar CTA amarillo "Publish" para bloquear edición y pasar la ruta a ejecución.
+* **Historias de Usuario asociadas:** US16, US19, US20, US23, US29, TS-PLA-001, TS-PLA-002, TS-PLA-003, TS-PLA-004.
+
+![wireflow5.png](assets/images/cap3/wireframes/wireflows/wireflow5.png)
+
+
+##### Task Flow 6: Reporte y Seguimiento de Incidentes en Campo (Incidents)
+* **Objetivo:** Permitir al transportista o administrador registrar imprevistos operativos en ruta adjuntando fotos como evidencia, y visualizar el historial de incidencias clasificadas por prioridad.
+* **Pasos:** Acceder a la sección "Incidents" (si no hay datos se muestra estado vacío "Incidents not found") $\rightarrow$ Presionar "+ Report incident" $\rightarrow$ Se despliega modal de reporte $\rightarrow$ Seleccionar Categoría (Category) y Prioridad (Priority) $\rightarrow$ Escribir descripción detallada $\rightarrow$ Cargar evidencia mediante "Take a photo" o "Upload photo" $\rightarrow$ Enviar reporte en botón amarillo "Send report" $\rightarrow$ Visualizar historial en "Reported incidents" filtrando por estado (All, In review, Resolved) y distintivos de prioridad (High, Medium, Low).
+* **Historias de Usuario asociadas:** US21, US28, US30, US32.
+
+![wireflow6.png](assets/images/cap3/wireframes/wireflows/wireflow6.png)
+---
+
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
