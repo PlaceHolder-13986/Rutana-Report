@@ -80,8 +80,9 @@ Proyecto
 | 1.4   | 07/10/2026 | Howard Robles, Guillermo Arturo  | Creación del user stories.      |
 |1.5 | 08/10/2026 | Ramirez Cabrera, Kenyi Efrain  | Añadido de los prototipos.      |
 | 1.6| 08/10/2026 | Howard Robles, Guillermo Arturo  | Creación del sprint backlog 1.      |
-| 1.7| 08/10/2026 | Howard Robles, Guillermo Arturo  | Creación de la pruebas de execución.      |
+| 1.7| 08/10/2026 | Howard Robles, Guillermo Arturo  | Creación de la pruebas de execución 1.      |
 | 1.8 | 08/10/2026 | Howard Robles, Guillermo Arturo  | Añadido de la colaboración en el sprint 1.      |
+| 1.9 | 08/10/2026 | Howard Robles, Guillermo Arturo  | Añadido development evidence 1.      |
 
 ---
 
