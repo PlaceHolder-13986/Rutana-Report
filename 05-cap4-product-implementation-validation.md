@@ -305,21 +305,11 @@ Se ha creado la primera version del landing page.
 
 | Repository                                                          | Branch                   | Commit Id | Commit Message                       | Commit Message Body                                                         | Commited on (Date) |
 |---------------------------------------------------------------------|--------------------------|-----------|--------------------------------------|-----------------------------------------------------------------------------|--------------------|
-| GuillermoPomace/upc-pre-202610-1asio0730-10215-NovaTech-LandingPage | feature/change-link-page | f7daaae   | fix: update registration button link | Actualización del enlace del botón de registro a la nueva URL del FrontEnd. | 06/07              |
+| upc-pre-202610-1asio0730-10215-Rutana-LandingPage | feature/change-link-page | f7daaae   | fix: update registration button link | Actualización del enlace del botón de registro a la nueva URL del FrontEnd. | 06/07              |
 
 
 ---
 
-**App Móvil:**
-
-Se ha creado la primera version de la aplicación móvil. 
-
-| Repository                                                          | Branch                   | Commit Id | Commit Message                       | Commit Message Body                                                         | Commited on (Date) |
-|---------------------------------------------------------------------|--------------------------|-----------|--------------------------------------|-----------------------------------------------------------------------------|--------------------|
-| GuillermoPomace/upc-pre-202610-1asio0730-10215-NovaTech-LandingPage | feature/change-link-page | f7daaae   | fix: update registration button link | Actualización del enlace del botón de registro a la nueva URL del FrontEnd. | 06/07              |
-
-
----
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
@@ -331,11 +321,11 @@ A continuación, se muestra un video con los avances realizados durante el Sprin
 
 Video del sprint1:
 
-<img src="assets/images/cap5/Video-Sprint4.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+<img src="assets/images/cap4/landingpage-rutana-video-1.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
 
-Enlace del video: [Video Sprint1](https://tinyurl.com/3kphpesr)
+Enlace del video: [Video Sprint1](https://youtu.be/oKpfKZ_0Ujc)
 
-Duración: 0:00 - 
+Duración: 0:00 - 1:21
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
@@ -375,7 +365,23 @@ Durante este sprint, se realizó el correcto despliegue de la Landing Page en re
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
+Se crearon ramas específicas para cada actions (feature/[actions-entite-command/query]), permitiendo un trabajo paralelo organizado.
 
+Cada miembro del equipo asumió la responsabilidad de desarrollar una o más secciones del Landing page y app web. Se realizaron commits frecuentes, registrando avances de manera continua y detallada. Las funcionalidades desarrolladas se integraron mediante Pull Requests hacia la rama develop con ayuda de la herramienta GitFlowHelper. Se mantuvo una comunicación constante mediante la plataforma Discord para coordinar avances y resolver dudas en tiempo real. Se aplicaron buenas prácticas de programación, control de versiones y colaboración en equipo.
+
+***Landing Page***
+
+**Analíticos de colaboración**
+
+Permite visualizar y analizar la participación del equipo en tareas colaborativas, identificando el nivel de actividad y compromiso de cada miembro para optimizar la coordinación y la productividad.
+
+<img src="assets/images/cap4/Analytics_Colaborations_Landing_1.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
+**Analíticos de commits de GitHub**
+
+Muestra el historial y frecuencia de commits realizados en GitHub, ayudando a evaluar el ritmo de desarrollo, la contribución individual y detectar posibles cuellos de botella en el flujo de trabajo.
+
+<img src="assets/images/cap4/Analytics_Commitss_Landing_1.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
 
 
 ### 4.2.1. Sprint n
