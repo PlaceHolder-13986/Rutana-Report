@@ -250,10 +250,9 @@ A través de una reunión en la plataforma Discord, se planteó el inicio del Sp
 | Sprint n-1 Review Summary        | No hubo sprint anterior                                                                                                                                                                           |
 | Sprint n-1 Retrospective Summary | No hubo sprint anterior                                                                                                                                                                           |
 | **Sprint Goal & User Stories**   |                                                                                                                                                                                                   |
-| Sprint 1 Goal                    | N                                                                                                                                                                                                 |
-| Sprint 1 Velocity                | 1                                                                                                                                                                                                 |
-| Sum of Story Points              | 1                                                                                                                                                                                                 |
-
+| Sprint 1 Goal                    | Nuestro enfoque es establecer las bases del proyecto: dar a los VISITANTES una landing page que presente la propuesta de valor de Rutana, permitir a los ADMINISTRADORES registrarse, crear su organización, contratar una suscripción e iniciar sesión de forma segura, y brindar al equipo de desarrollo una arquitectura, un repositorio y un entorno de despliegue definidos sobre los cuales construir los siguientes incrementos.  Creemos que esto ofrece a los visitantes, una primera impresión clara de cómo Rutana resuelve la falta de trazabilidad y los procesos manuales en el transporte de carga; a los administradores, un acceso seguro y un proceso de incorporación simple que genera confianza desde el primer contacto; y al equipo de desarrollo, una base técnica ordenada (bounded contexts IAM y Suscriptions) que reduce el retrabajo y facilita la colaboración.  Esto se confirmará cuando: la landing page esté publicada y accesible; los administradores puedan registrarse, crear una organización, activar una suscripción y gestionar sus sesiones y usuarios; y el equipo cuente con el repositorio, la arquitectura base y el flujo de despliegue operativos y validados por el Product Owner.                                                                                                                                                                                                 |
+| Sprint 1 Velocity                | 15                                                                                                                                                                                                  |
+| Sum of Story Points              | 15                                                                                                                                                                                                 |
 
 #### 4.2.1.2. Aspect Leaders and Collaborators
 
@@ -261,28 +260,86 @@ Durante el Sprint 1, se ha consolidado la integración final de los módulos pri
 
 Con el fin de mantener una coordinación efectiva y una comunicación fluida entre los integrantes del equipo, se estructuró la matriz de liderazgo y colaboración (LACX), donde se asignó un líder (L) encargado de cada funcionalidad y colaboradores (C) que brindan apoyo en su implementación.
 
-| Team Member (Last Name, First Name) | GitHub Username       | 
-|:------------------------------------|:----------------------|
-| Costa Morales, Christofer William   | miniChorri            | 
-| Howard Robles, Guillermo Arturo     | GuillermoPromac       | 
-| Huaman Gallardo, Bruno Aldair       | BrunoHG10             | 
-| Miraval Pomalaya, Rodrigo Jesus     | RodMiraval            | 
-| Ramirez Cabrera, Kenyi Efrain       | Kenyi15upc            | 
-
+| Team Member (Last Name, First Name) | GitHub Username       | IAM | Suscriptions | Fleet | CRM | Planning | 
+|:------------------------------------|:----------------------|:----|:-------------|:------|:----|:---------|
+| Costa Morales, Christofer William   | miniChorri            | L  | C | C | C | C |
+| Howard Robles, Guillermo Arturo     | GuillermoPromac       | C  | L | C | C | C |
+| Huaman Gallardo, Bruno Aldair       | BrunoHG10             | C  | C | L | C | C |
+| Miraval Pomalaya, Rodrigo Jesus     | RodMiraval            | C  | C | C | L | C |
+| Ramirez Cabrera, Kenyi Efrain       | Kenyi15upc            | C  | C | C | C | L |
 
 #### 4.2.1.3. Sprint Backlog 1
 
+El objetivo principal de este Sprint es consolidar la experiencia de usuario en los módulos de IAM y Suscriptions, asegurando que los visitantes puedan acceder a la landing page. 
+
+<img src="assets/images/cap4/Sprint-Blacklog-1.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
+| Work-item / Task | Description                                              | Estimation (hours) | 
+|------------------|----------------------------------------------------------|--------------------|
+| US01-01          | Crear endpoint de registro de cuenta                     | 2                  | 
+| US01-02          | Validar datos de entrada y manejar errores 400           | 1                  |
+| US01-03          | Implementar formulario de registro en el frontend        | 2                  | 
+| US06-01          | Definir modelo de planes y suscripciones                 | 2                  | 
+| US06-02          | Crear endpoint para suscribirse a un plan                | 2                  | 
+| US06-03          | Implementar vista de selección de planes                 | 2                  | 
+| US08-01          | Fix bad request 400 on profile creation                  | 1                  |
+| US08-02          | Integrate profile context fixes                          | 1                  | 
+| US08-03          | Crear endpoint para asignar personal                     | 2                  | 
+| US09-01          | Crear modelo y endpoint de registro de clientes          | 2                  | 
+| US09-02          | Implementar formulario de registro de clientes           | 2                  | 
+| US10-01          | Crear endpoints de listar, editar y eliminar clientes    | 2                  | 
+| US10-02          | Implementar vista de listado y gestión de clientes       | 2                  | 
+| US10-03          | Crear modelo y endpoint de ubicaciones                   | 2                  | 
+| US10-04          | Asignar ubicación a un cliente                           | 1                  | 
+| US10-05          | Implementar formulario de ubicación en el frontend       | 2                  | 
+| US17-01          | Crear modelo y endpoint de registro de vehículos         | 2                  | 
+| US17-02          | Implementar formulario de registro de vehículo           | 2                  | 
+| US23-01          | Integrar servicio de mapas para calcular la ruta         | 3                  | 
+| US23-02          | Implementar vista previa de la ruta en el frontend       | 3                  | 
+
 #### 4.2.1.4. Development Evidence for Sprint Review
+
+**Landing page:**
+
+Se ha creado la primera version del landing page.
+
+| Repository                                                          | Branch                   | Commit Id | Commit Message                       | Commit Message Body                                                         | Commited on (Date) |
+|---------------------------------------------------------------------|--------------------------|-----------|--------------------------------------|-----------------------------------------------------------------------------|--------------------|
+| GuillermoPomace/upc-pre-202610-1asio0730-10215-NovaTech-LandingPage | feature/change-link-page | f7daaae   | fix: update registration button link | Actualización del enlace del botón de registro a la nueva URL del FrontEnd. | 06/07              |
+
+
+---
+
+**App Móvil:**
+
+Se ha creado la primera version de la aplicación móvil. 
+
+| Repository                                                          | Branch                   | Commit Id | Commit Message                       | Commit Message Body                                                         | Commited on (Date) |
+|---------------------------------------------------------------------|--------------------------|-----------|--------------------------------------|-----------------------------------------------------------------------------|--------------------|
+| GuillermoPomace/upc-pre-202610-1asio0730-10215-NovaTech-LandingPage | feature/change-link-page | f7daaae   | fix: update registration button link | Actualización del enlace del botón de registro a la nueva URL del FrontEnd. | 06/07              |
+
+
+---
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
+
+
 #### 4.2.1.6. Execution Evidence for Sprint Review
+
+
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
+
+
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
+
+
 #### 4.2.1.9. Team Collaboration Insights during Sprint
+
+
 
 ### 4.2.1. Sprint n
 
