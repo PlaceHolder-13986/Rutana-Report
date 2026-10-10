@@ -83,6 +83,7 @@ Proyecto
 | 1.7| 08/10/2026 | Howard Robles, Guillermo Arturo  | Creación de la pruebas de execución 1.      |
 | 1.8 | 08/10/2026 | Howard Robles, Guillermo Arturo  | Añadido de la colaboración en el sprint 1.      |
 | 1.9 | 08/10/2026 | Howard Robles, Guillermo Arturo  | Añadido development evidence 1.      |
+| 1.10 | 09/10/2026 | Howard Robles, Guillermo Arturo  | Añadido del report collaboration Insights.      |
 
 ---
 
@@ -94,6 +95,18 @@ Esta sección detalla cómo el equipo colaboró para construir el **Final Projec
 
 **Repositorio del informe del proyecto:**  
 [https://github.com/PlaceHolder-13986](https://github.com/PlaceHolder-13986)
+
+<img src="assets/images/readme/collaboration-insights.png" alt="Descargar" width="700" height="700">
+
+- **Total de commits:** 109
+- **Autores contribuyentes:**
+    - Christofer Costa (`miniChorri`)
+    - Guillermo Howard (`GuillermoPromac`)
+    - Bruno Huaman (`BrunoHG10`)
+    - Rodrigo Miraval (`RodMiraval`)
+    - Kenyi Ramirez (`Kenyi15upc`)
+- Actividad distribuida por ramas correspondientes a cada sección del informe.
+- Todos los miembros participaron activamente en la redacción y revisión del contenido.
 
 <div style="page-break-after: always;"></div>
 
