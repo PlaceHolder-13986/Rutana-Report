@@ -576,7 +576,7 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
 ### 2.4.1. User Stories
 
 <table border="1" style="border-collapse:collapse; width:100%; table-layout:fixed;">
-  <tr><th style="width:15%;">Epic /<br> Story/<br>ID</th>    <th style="width:15%;">Título</th><th style="width:35%;">Descripción</th><th style="width:25%;">Criterios de Aceptación</th><th style="width:10%;">Relacionado con<br>(Epic ID)</th></tr>
+  <tr><th style="width:15%;">Epic /<br> Story/<br>ID</th>    <th style="width:15%;">Título</th><th style="width:35%;">Descripción</th>
   <tr>
     <td>EP01</td>
     <td>Registro y autenticación</td>
@@ -584,8 +584,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como usuario</b>, quiero poder registrar, iniciar sesión, recuperar mi contraseña y cambiarla,
       <p>para poder acceder a la plataforma y mantener mi cuenta segura.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP02</td>
@@ -594,8 +592,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como administrador</b>, quiero administrar los diferentes perfiles bajo mi cuenta y otorgarles los permisos pertinentes,
       <p>para que realicen sus trabajos sin que personal no autorizado acceda a información reservada.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP03</td>
@@ -604,8 +600,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como usuario</b>, quiero manejar y monitorear mis suscripciones,
       <p>para poder crear y gestionar una mayor cantidad de organizaciones y asignarles su respectivo personal.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP04</td>
@@ -614,8 +608,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como administrador</b>, quiero controlar la información, estado y puntos de entrega de clientes frecuentes,
       <p>para agilizar la asignación de zonas de despacho a transportistas.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP05</td>
@@ -624,8 +616,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como administrador</b>, quiero registrar, organizar y gestionar ubicaciones relacionadas con las operaciones de transporte,
       <p>para optimizar la planificación de rutas y la logística de entregas.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP06</td>
@@ -634,8 +624,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como administrador</b>, quiero gestionar el estado de los vehículos y los recursos de la flota,
       <p>para garantizar que las unidades estén disponibles, en buen estado y listas para operar.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP07</td>
@@ -644,8 +632,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como transportista</b>, quiero actualizar los estados de cada pedido a lo largo de la ruta de distribución,
       <p>para proporcionar visibilidad sobre mi progreso y garantizar que administración reciba información actualizada.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP08</td>
@@ -654,8 +640,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como transportista</b>, quiero reportar eventos inesperados que afecten la operación de transporte (retrasos, problemas mecánicos, clientes ausentes),
       <p>para que los administradores reciban notificaciones y puedan resolver o mitigar los problemas oportunamente.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP09</td>
@@ -664,8 +648,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como administrador</b>, quiero generar reportes y análisis detallados sobre el rendimiento de mis vehículos,
       <p>para optimizar la eficiencia, mejorar las rutas y aumentar la satisfacción del cliente.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   <tr>
     <td>EP10</td>
@@ -674,8 +656,6 @@ Ambos perfiles coinciden en la importancia de **gestionar incidencias** y **mant
       <b>Como visitante</b>, quiero acceder a un sitio web estático bien diseñado, segmentado y disponible en múltiples idiomas,
       <p>para informarme sobre la plataforma y facilitar mi decisión de registrarme.</p>
     </td>
-    <td>-</td>
-    <td>-</td>
   </tr>
   </table>
   <table border="1" style="border-collapse:collapse; width:100%; table-layout:fixed;">
