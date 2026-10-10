@@ -2059,10 +2059,201 @@ Para cada flujo se identificaron: el actor iniciador, los bounded contexts invol
 Con estas historias de dominio se evidencia cómo colaboran los bounded contexts **IAM**, **Suscriptions**, **CRM**, **Fleet** y **Planning** para resolver los principales casos de uso del negocio en Rutana.
 
 #### 2.5.1.3. Bounded Context Canvases
+
+<img src="assets/images/cap2/bounded-context-canvas-1-planning.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
 ### 2.5.2. Context Mapping
+
+Para llegar al mapa de contextos final se generaron cuatro candidatos y se evaluó cada uno planteando preguntas de rediseño (qué pasaría si movemos, descomponemos, partimos o duplicamos capabilities).
+
+***Candidatos evaluados***
+
+| # | Pregunta de diseño | Candidato resultante | Ventajas | Desventajas |
+|---|--------------------|----------------------|----------|-------------|
+| A | ¿Qué pasa si mantenemos los 5 contextos del EventStorming? | IAM, Suscriptions, Fleet, CRM y Planning separados. | Límites claros y alineados con los pivotal events; bajo acoplamiento; cada contexto tiene un propósito único. | Más integración por eventos y más consistencia eventual. |
+| B | ¿Qué pasa si fusionamos Fleet y CRM en un contexto de "Recursos y datos maestros"? | 4 contextos: IAM, Suscriptions, Resources y Planning. | Menos integración y menos eventos. | Mezcla dos lenguajes ubicuos distintos (vehículo vs. cliente/ubicación) y dos razones de cambio. |
+| C | ¿Qué pasa si partimos Planning en *Route Planning* y *Route Execution & Monitoring*? | 6 contextos. | Aísla la ejecución offline del transportista y el monitoreo del planeamiento. | Duplica el concepto de ruta y añade complejidad prematura para el MVP. |
+| D | ¿Qué pasa si creamos un *shared service* de validación de suscripción en lugar de que cada contexto escuche eventos? | Un servicio compartido consultado por Fleet, CRM y Planning. | Elimina la duplicación del estado de suscripción. | Introduce un acoplamiento síncrono y un punto de falla compartido. |
+
+***Decisión***
+
+Se eligió el **candidato A** porque respeta los pivotal events identificados, mantiene un lenguaje ubicuo coherente por contexto y permite que cada Core Domain evolucione de forma independiente. El candidato C queda como evolución futura si el monitoreo y las incidencias crecen, y la duplicación controlada del estado de suscripción (en lugar del servicio compartido del candidato D) evita acoplar los tres Core Domain a un único servicio.
+
+***Context Map final***
+
+```plantuml
+@startuml
+left to right direction
+skinparam rectangle {
+  RoundCorner 15
+}
+
+rectangle "IAM\n<<Generic>>" as IAM
+rectangle "Suscriptions\n<<Supporting>>" as SUB
+rectangle "Planning\n<<Core>>" as PLAN
+rectangle "CRM\n<<Core>>" as CRM
+rectangle "Fleet\n<<Core>>" as FLEET
+cloud "Google Maps API" as GMAPS
+cloud "Pasarela de Pago" as PAY
+cloud "Servicio de Correo" as MAIL
+
+IAM --> SUB  : OHS / PL (U) → Conformist (D)\nOrganizationCreated
+IAM --> PLAN : OHS / PL (U) → Conformist (D)\nToken JWT y roles
+IAM --> CRM  : OHS / PL (U) → Conformist (D)
+IAM --> FLEET: OHS / PL (U) → Conformist (D)
+SUB --> PLAN : Customer/Supplier\nSubscriptionActivated / Expired
+SUB --> CRM  : Customer/Supplier
+SUB --> FLEET: Customer/Supplier
+FLEET --> PLAN : Customer/Supplier\nFleetContextFacade (ACL)
+CRM --> PLAN : Customer/Supplier\n+ ACL en Planning
+PLAN --> CRM : Evento de estado de ubicación\n(Conformist)
+CRM --> GMAPS : ACL
+SUB --> PAY : ACL
+IAM --> MAIL : ACL
+@enduml
+```
+
+***Relaciones entre contextos***
+
+| Upstream (U) | Downstream (D) | Patrón DDD | Justificación |
+|--------------|----------------|------------|---------------|
+| IAM | Suscriptions, Planning, CRM, Fleet | Open Host Service + Published Language / Conformist | IAM publica un modelo estable de identidad (token y roles) que los demás adoptan tal cual. |
+| Suscriptions | CRM, Fleet, Planning | Customer/Supplier | Los contextos consumidores negocian con Suscriptions el contrato de los eventos de activación y expiración. |
+| Fleet | Planning | Customer/Supplier + ACL | Planning consulta vehículos disponibles mediante `FleetContextFacade`, de modo que el modelo interno de Fleet queda protegido. |
+| CRM | Planning | Customer/Supplier + ACL | Planning traduce las ubicaciones de CRM a su propio concepto de *Route Location*. |
+| Planning | CRM | Conformist (solo eventos) | CRM adopta el evento de estado de ubicación sin influir en Planning. Se evita así la dependencia circular. |
+| Google Maps API | CRM | Anti-Corruption Layer | Aísla el modelo de CRM de la API externa. |
+| Pasarela de pago | Suscriptions | Anti-Corruption Layer | Aísla el modelo de pagos del proveedor. |
+
+No se utiliza *Shared Kernel*: cada contexto mantiene su propio modelo y se integra únicamente mediante eventos y contratos publicados.
+
+---
+
 ### 2.5.3. Software Architecture
+
+La arquitectura de software de Rutana se representa con el **C4 Model**, que describe el sistema en niveles sucesivos de detalle (Contexto, Contenedores, Componentes y Código). Los diagramas se elaboraron con **Structurizr (DSL)**. Esta sección cubre los dos primeros niveles; los diagramas de componentes y de código de cada bounded context se presentan en la sección 2.6.
+
+La solución abarca cuatro productos: la Landing Page, la Web Application para administradores y despachadores, la Mobile Application para transportistas y el Backend con sus servicios web.
+
 #### 2.5.3.1. Software Architecture Context Level Diagrams
+
+El diagrama de contexto muestra a **Rutana** como un único recuadro central rodeado por sus usuarios y por los sistemas externos con los que interactúa.
+
+**Personas (usuarios):**
+
+| Actor | Descripción |
+|-------|-------------|
+| Administrador / Despachador | Gestiona la organización, los clientes, las ubicaciones y los vehículos; planifica, publica y supervisa rutas, y genera reportes. |
+| Transportista | Consulta su ruta asignada, confirma o rechaza entregas y reporta incidencias desde su teléfono. |
+| Visitante | Conoce la plataforma y sus planes en la landing page antes de registrarse. |
+
+**Sistemas externos:**
+
+| Sistema | Interacción |
+|---------|-------------|
+| Google Maps API | Geocodifica direcciones de clientes y apoya el cálculo y la visualización de rutas. |
+| Pasarela de Pago | Procesa los pagos de las suscripciones. |
+| Servicio de Correo | Envía las invitaciones a las organizaciones y las notificaciones. |
+
+**Código Structurizr DSL:**
+
+```
+workspace "Rutana" "Arquitectura de software de Rutana (C4 Model)" {
+
+    !impliedRelationships true
+
+    model {
+        admin   = person "Administrador / Despachador" "Gestiona clientes, ubicaciones y flota; planifica y supervisa rutas."
+        driver  = person "Transportista" "Ejecuta rutas, confirma entregas y reporta incidencias."
+        visitor = person "Visitante" "Conoce la plataforma y sus planes."
+
+        maps    = softwareSystem "Google Maps API" "Geocodificación y rutas." "External"
+        payment = softwareSystem "Pasarela de Pago" "Procesa pagos de suscripciones." "External"
+        mail    = softwareSystem "Servicio de Correo" "Envía invitaciones y notificaciones." "External"
+
+        rutana = softwareSystem "Rutana" "Plataforma SaaS de gestión inteligente de rutas para empresas de distribución." {
+
+            landing = container "Landing Page" "Presenta la propuesta de valor, planes y equipo." "HTML5, CSS3, JavaScript" "Web Browser"
+            webapp  = container "Web Application" "Panel para administradores y despachadores." "SPA (Frontend Web)" "Web Browser"
+            mobile  = container "Mobile Application" "App del transportista con soporte offline." "Android, Kotlin, Jetpack Compose, Room (SQLite)" "Mobile App"
+            api     = container "Backend Web Services" "API REST organizada por bounded context: IAM, Suscriptions, Fleet, CRM y Planning." "Java, Spring Boot, Spring Data JPA"
+            broker  = container "Message Broker" "Transporta los eventos de dominio entre bounded contexts." "Broker de mensajería" "Queue"
+            db      = container "Database" "Almacena los datos de cada bounded context." "Base de datos relacional" "Database"
+        }
+
+        visitor -> landing "Consulta información" "HTTPS"
+        landing -> webapp  "Redirige al registro e inicio de sesión" "HTTPS"
+        admin   -> webapp  "Gestiona operaciones" "HTTPS"
+        driver  -> mobile  "Ejecuta rutas" 
+
+        webapp -> api "Consume la API" "HTTPS / JSON (REST)"
+        mobile -> api "Consume la API y sincroniza cambios offline" "HTTPS / JSON (REST)"
+        api -> db     "Lee y escribe" "JDBC"
+        api -> broker "Publica y consume eventos de dominio" "AMQP"
+
+        api -> maps    "Geocodifica y calcula rutas" "HTTPS"
+        api -> payment "Procesa pagos" "HTTPS"
+        api -> mail    "Envía correos" "SMTP / HTTPS"
+    }
+
+    views {
+        systemContext rutana "Contexto" {
+            include *
+            autoLayout
+        }
+
+        container rutana "Contenedores" {
+            include *
+            autoLayout
+        }
+
+        styles {
+            element "Person"          { shape Person
+                                        background #08427b
+                                        color #ffffff }
+            element "Software System" { background #1168bd
+                                        color #ffffff }
+            element "External"        { background #999999
+                                        color #ffffff }
+            element "Container"       { background #438dd5
+                                        color #ffffff }
+            element "Web Browser"     { shape WebBrowser }
+            element "Mobile App"      { shape MobileDeviceLandscape }
+            element "Database"        { shape Cylinder }
+     
+```
+
+**Explicación del diagrama.** Rutana se sitúa en el centro como un único sistema. El *Administrador / Despachador* lo usa para planificar y supervisar; el *Transportista* para ejecutar las rutas en campo; y el *Visitante* conoce el producto antes de registrarse. Hacia afuera, Rutana depende de tres sistemas externos: Google Maps API (geolocalización y rutas), la Pasarela de Pago (suscripciones) y el Servicio de Correo (invitaciones).
+
+
+
 #### 2.5.3.2. Software Architecture Container Level Diagrams
+
+El diagrama de contenedores descompone Rutana en sus elementos ejecutables de alto nivel, muestra cómo se reparten las responsabilidades y cómo se comunican entre sí. (El código DSL de la sección anterior ya incluye la vista `Contenedores`).
+
+| Container | Tecnología | Responsabilidad |
+|-----------|------------|-----------------|
+| Landing Page | HTML5, CSS3 y JavaScript nativo, publicada como sitio estático (Render) | Presentar la propuesta de valor, características, planes, equipo y testimonios; dirigir al registro. |
+| Web Application | SPA (Frontend Web) | Panel de administración: usuarios, clientes, ubicaciones, vehículos, planificación y monitoreo de rutas, reportes. |
+| Mobile Application | Android nativo con Kotlin y Jetpack Compose; persistencia local con Room (SQLite); Retrofit para consumir la API | Mostrar la ruta del transportista, confirmar o rechazar entregas, reportar incidencias; funciona sin conexión y sincroniza al recuperar señal. |
+| Backend Web Services | Java con Spring Boot y Spring Data JPA | Exponer la API REST y alojar los cinco bounded contexts (IAM, Suscriptions, Fleet, CRM y Planning) como módulos con arquitectura en capas (Interface, Application, Domain, Infrastructure). Autentica con tokens JWT. |
+| Message Broker | Broker de mensajería (AMQP) | Entregar los eventos de dominio (`OrganizationCreated`, `SubscriptionActivated`, `VehicleRegistered`, `RoutePublished`, etc.) entre contextos de forma asíncrona. |
+| Database | Base de datos relacional | Persistir los datos; cada bounded context usa su propio esquema para evitar acoplamiento por datos. |
+
+**Comunicación entre containers**
+
+- Web Application y Mobile Application se comunican con el Backend mediante **HTTPS con JSON (API REST)**, autenticadas con **JWT**.
+- El Backend accede a la base de datos con **JDBC/JPA** y se comunica con los contextos mediante **eventos de dominio** sobre el broker.
+- El Backend consume Google Maps API, la Pasarela de Pago y el Servicio de Correo por **HTTPS**, a través de capas anticorrupción.
+- La Landing Page solo redirige al registro y al inicio de sesión de la Web Application; no consume la API.
+
+**Decisiones de arquitectura**
+
+1. **Backend modular por bounded context:** cada contexto se separa en su propio módulo y esquema de datos, lo que facilita extraerlo a un servicio independiente más adelante sin reescribir su dominio.
+2. **Comunicación asíncrona por eventos** entre contextos, en coherencia con el Context Map (Customer/Supplier y Conformist).
+3. **App móvil nativa con persistencia local**, porque el transportista puede perder conexión durante la ruta y los cambios deben sincronizarse después.
+4. **Landing Page estática e independiente** del panel, para desplegarse sin depender del backend.
+
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
 En esta sección se presenta el Deployment Diagram elaborado bajo el estándar C4. Este diagrama describe la distribución física del sistema y la topología de infraestructura sobre la cual se ejecutan los componentes de software.
