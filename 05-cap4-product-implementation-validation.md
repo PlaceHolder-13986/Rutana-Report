@@ -323,21 +323,58 @@ Se ha creado la primera version de la aplicación móvil.
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-
+No se realizaron pruebas unitarias ni de integración durante este sprint, ya que el enfoque principal fue establecer la base del proyecto y garantizar la funcionalidad esencial de la landing page y los módulos de IAM y Suscriptions. Las pruebas se planificarán para los próximos sprints, una vez que se hayan consolidado las funcionalidades básicas y se cuente con un entorno más estable para realizar pruebas exhaustivas.
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
+A continuación, se muestra un video con los avances realizados durante el Sprint 1.
 
+Video del sprint1:
+
+<img src="assets/images/cap5/Video-Sprint4.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
+Enlace del video: [Video Sprint1](https://tinyurl.com/3kphpesr)
+
+Duración: 0:00 - 
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
+Durante este sprint comenzó con el desarrollo del landing page, asi que como de la aplicación móvil.
 
+A su vez se completó el deployment del landing page y de la aplicación móvil, asegurando que ambos estén accesibles y funcionando correctamente.
+
+Descripción del Logro:
+
+- Se desarrolló la landing page.
+- Se desarrolló la aplicación móvil.
+- Se establecieron los líderes de cada módulo y se asignaron colaboradores para garantizar una implementación eficiente.
+- Se realizó la integración de los módulos de IAM y Suscriptions.
+- Se completó la implementación de la landing page y de la aplicación móvil, asegurando que ambos estén accesibles y funcionando correctamente.
 
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
+Durante este sprint, se realizó el correcto despliegue de la Landing Page en render, asegurando que los servicios estén accesibles y funcionando correctamente.
 
+***LandingPage***
+
+1. Se seleccionó la creación de un nuevo proyecto en Render el cual será una página estática.
+
+<img src="assets/images/cap4/Deployment-landing-1.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
+2. Se configuró el proyecto con la URL del repositorio de GitHub y se estableció la rama `main` como fuente de despliegue.
+
+<img src="assets/images/cap4/Deployment-landing-2.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
+3. Se estableció la carpeta raíz del proyecto como la ubicación de los archivos de la landing page.
+
+<img src="assets/images/cap4/Deployment-landing-3.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
+4. Se completó el despliegue de la landing page, y se verificó que esté accesible a través de la URL proporcionada por Render.
+
+<img src="assets/images/cap4/Deployment-landing-4.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
+
 
 
 
