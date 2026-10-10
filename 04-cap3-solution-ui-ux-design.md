@@ -612,5 +612,5 @@ A continuación, se presentan las evidencias de la simulación de interacción y
 
 | Aplicación / Módulo | Descripción de la Simulación de Interacción | Captura de Pantalla (Video Screenshot) | Enlace a Demostración (Microsoft Stream) |
 | :--- | :--- | :---: | :---: |
-| **Rutana Mobile App (Driver & Manager)** | Simulación completa que abarca el flujo de autenticación, gestión de flota, registro cartográfico de clientes, configuración y publicación de rutas, y reporte de incidentes con evidencia fotográfica. | ![rutana_prototype_login.png](assets/images/cap3/rutana_prototype_login.png) |  |
+| **Rutana Mobile App (Driver & Manager)** | Simulación completa que abarca el flujo de autenticación, gestión de flota, registro cartográfico de clientes, configuración y publicación de rutas, y reporte de incidentes con evidencia fotográfica. | ![rutana_prototype_login.png](assets/images/cap3/rutana_prototype_login.png) | https://n9.cl/m4uvwz |
 
