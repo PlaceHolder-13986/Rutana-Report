@@ -85,6 +85,7 @@ Proyecto
 | 1.9 | 08/10/2026 | Howard Robles, Guillermo Arturo  | Añadido development evidence 1.      |
 | 1.10 | 09/10/2026 | Howard Robles, Guillermo Arturo  | Añadido del report collaboration Insights.      |
 | 2.1 | 12/11/2026 | Howard Robles, Guillermo Arturo  | Añadido del sprint planning 2.      |
+| 2.2 | 12/11/2026 | Howard Robles, Guillermo Arturo  | Añadido del execution evidence 2.      |
 
 ---
 
