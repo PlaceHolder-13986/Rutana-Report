@@ -28,16 +28,16 @@ Para el manejo del codigo fuente de Rutana se organiza en repositorios independi
 | FrontEnd Web Application  | [FrontEnd][11] |
 | BackEnd Web Services  | [Backend][12] |
 
-##### GitFlow WorFlow
+***GitFlow WorFlow***
 
 Se implemento GitFlow cómo flujo de trabajo para organizar el desarrollo de los artefactos por funcionalidades, mantener una separación del codigo para evitar errores y mantener ramas de desarrollos especificas para cada módulo o bounded context
 
-###### Ramas principales
+***Ramas principales***
 
 1.  main: Rama pincipal para versiones estables y desplegables de los artefactos
 2.  develop: Rama de integración utilizada para consolidar las funcionalidades o cambios previos a la versión final del producto
 
-###### Ramas de soporte
+***Ramas de soporte***
 
 1.  feature/*:  Rama creada a partir del develop para poder implementar nuevas funcionalidades.
 
@@ -54,7 +54,7 @@ Ejemplo: `docs/presentation`
 Convención:  `hotfix/<descripción-corta>`
 Ejemplo: `hotfix/fix-item-validation`
 
-##### Semantic Versioning
+***Semantic Versioning***
 
 Se aplica Semantic Versioning 2.0.0, con el formato:
 
@@ -64,7 +64,7 @@ Se aplica Semantic Versioning 2.0.0, con el formato:
 
 Ejemplo de versión: `v1.3.2`
 
-##### Conventional Commits
+***Conventional Commits***
 
 La organización utilizó la especificación de los Conventional Commits para mantener un orden y claridad en los mensajes de cada commit realizado por los integrantes. En este caso la estructura general de cada commit seria la siguiente: ` tipo(enfoque opcional): <descripción> `
 
@@ -93,7 +93,7 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 | Coil|[Coil for Jetpack Compose][coil]|
 | Gherkin|[Gherkin Reference][gherkin]|
 
-##### Nomenclatura general (Kotlin)
+***Nomenclatura general (Kotlin)***
 
 | Elemento | Convención | Ejemplo |
 |:----|:----|:----|
@@ -109,7 +109,7 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 | Paquetes | minúsculas, sin guiones ni guiones bajos | `com.bevtrace.app.batches.presentation` |
 | Archivos Kotlin | PascalCase, igual a la clase principal | `BatchEntity.kt`, `BatchListScreen.kt` |
 
-##### Nomenclatura de interfaz de usuario (Jetpack Compose)
+***Nomenclatura de interfaz de usuario (Jetpack Compose)***
 
 | Elemento | Convención | Ejemplo |
 |:----|:----|:----|
@@ -121,7 +121,7 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 | Rutas de navegación | camelCase o constantes | `batchDetail/{batchId}` |
 | Parámetros de eventos | camelCase con prefijo `on` | `onBatchClick`, `onSaveClick` |
 
-##### Nomenclatura de recursos Android
+***Nomenclatura de recursos Android***
 
 | Elemento | Convención | Ejemplo |
 |:----|:----|:----|
@@ -130,7 +130,7 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 | Colores (tema Material 3) | camelCase en `Color.kt` | `PrimaryLight`, `SurfaceDark` |
 | Archivos de traducción | carpetas por idioma | `values/strings.xml` (ES), `values-en/strings.xml` (EN) |
 
-##### Nomenclatura de comunicación HTTP (Retrofit)
+***Nomenclatura de comunicación HTTP (Retrofit)***
 
 | Elemento | Convención | Ejemplo |
 |:----|:----|:----|
@@ -140,7 +140,7 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 | Campos JSON | `@SerializedName` con el nombre del backend | `@SerializedName("laboratory_id") val laboratoryId` |
 | Rutas | kebab-case, recursos en plural | `@GET("api/v1/batches/{batchId}")` |
 
-##### Nomenclatura de base de datos (SQLite / Room)
+***Nomenclatura de base de datos (SQLite / Room)***
 
 | Elemento | Convención | Ejemplo |
 |:----|:----|:----|
@@ -160,7 +160,7 @@ En esta sección se describen las convenciones de estilo y nomenclatura adoptada
 | Fechas | sufijo `_at` (epoch en milisegundos) | `created_at`, `updated_at` |
 | Palabras reservadas SQL | MAYÚSCULAS | `SELECT * FROM batches WHERE id = :batchId` |
 
-##### Nomenclatura de preferencias (DataStore)
+***Nomenclatura de preferencias (DataStore)***
 
 | Elemento | Convención | Ejemplo |
 |:----|:----|:----|
@@ -206,11 +206,11 @@ En esta sección se describe la configuración necesaria para desplegar los prod
 
 #### 1. Landing Page – HTML, CSS y JavaScript
 
-##### Repositorio de Código Fuente
+***Repositorio de Código Fuente***
 
 La Landing Page se implementa empleando únicamente HTML, CSS y JavaScript nativo. Todos los archivos del proyecto deben almacenarse en un repositorio en GitHub, asegurando que el archivo **`index.html`** se ubique en la raíz del repositorio (`/`). Esto es indispensable para que GitHub Pages lo reconozca automáticamente como punto de entrada del sitio.
 
-##### Activación de GitHub Pages
+***Activación de GitHub Pages***
 
 1. Acceder al repositorio en GitHub.
 2. Ir a la pestaña **Settings**.
@@ -221,13 +221,13 @@ La Landing Page se implementa empleando únicamente HTML, CSS y JavaScript nativ
    - Carpeta: `/ (root)`
 5. Guardar los cambios.
 
-##### Publicación
+***Publicación***
 
 Tras guardar la configuración, GitHub generará de forma automática una URL pública donde estará disponible la Landing Page. El formato de la URL es:
 
 https://<usuario>.github.io/<repositorio>/
 
-##### Actualizaciones
+***Actualizaciones***
 
 Cualquier commit realizado en la rama `main` será desplegado automáticamente en la página publicada, sin necesidad de pasos adicionales. La actualización puede tardar unos minutos en reflejarse.
 
@@ -414,27 +414,80 @@ Muestra el historial y frecuencia de commits realizados en GitHub, ayudando a ev
 
 <img src="assets/images/cap4/Analytics_Commitss_Landing_1.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
 
+### 4.2.2. Sprint 2
 
-### 4.2.1. Sprint n
+#### 4.2.2.1. Sprint Planning 2
 
-#### 4.2.1.1. Sprint Planning n
+| Sprint # | Sprint 2 |
+| --- | --- |
+| **Sprint Planning Background** | |
+| Date | 2026-10-18|
+| Time | 09:30 (GMT-5) |
+| Location | Modalidad remota mediante la plataforma Discord |
+| Prepared By | Howard Robles, Guillermo Arturo |
+| Attendees (to planning meeting) | Costa Morales, Christofer William <br /> Howard Robles, Guillermo Arturo <br /> PHuaman Gallardo, Bruno Aldair <br /> Miraval Pomalaya, Rodrigo Jesus <br /> Ramirez Cabrera, Kenyi Efrain <br />|
+| Sprint n-1 Review Summary | Se presentó la primera versión de la landing page de Rutana y se documentó su despliegue en Render. También se reportó el inicio del desarrollo de la aplicación móvil. |
+| Sprint n-1 Retrospective Summary | Pendiente de registrar los acuerdos de la retrospectiva. El informe del Sprint 1 indica que las pruebas unitarias y de integración quedaron pendientes. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | Permitir que el **administrador** planifique y publique una ruta diaria de transporte de carga, y que el **conductor asignado** consulte su ruta, registre el resultado de las entregas y cierre el recorrido desde la aplicación móvil. Esto permitirá al administrador preparar los viajes y al conductor dejar constancia de las entregas realizadas o rechazadas. El objetivo se validará al demostrar que el administrador puede guardar la ruta en borrador, asignar un vehículo y puntos de entrega, y publicarla bloqueando la edición de los puntos. El conductor deberá poder consultar la ruta asignada, registrar una entrega realizada y otra rechazada con motivo, y cerrar el viaje. También se verificará el escenario de cierre con entregas pendientes previsto en el Product Backlog. |
+| Sprint 1 Velocity | 15 puntos, según el Sprint Planning 1 |
+| Sum of Story Points | 16 puntos en la selección propuesta para el Sprint 2 |
 
-#### 4.2.1.2. Aspect Leaders and Collaborators
+#### 4.2.2.2. Aspect Leaders and Collaborators
 
-#### 4.2.1.3. Sprint Backlog n
+Durante el Sprint 2, se ha consolidado la integración final de los módulos principales del frontend y backend desarrollado en flutter.
 
-#### 4.2.1.4. Development Evidence for Sprint Review
+Con el fin de mantener una coordinación efectiva y una comunicación fluida entre los integrantes del equipo, se estructuró la matriz de liderazgo y colaboración (LACX), donde se asignó un líder (L) encargado de cada funcionalidad y colaboradores (C) que brindan apoyo en su implementación.
 
-#### 4.2.1.5. Testing Suite Evidence for Sprint Review
+| Team Member (Last Name, First Name) | GitHub Username       | IAM | Suscriptions | Fleet | CRM | Planning | 
+|:------------------------------------|:----------------------|:----|:-------------|:------|:----|:---------|
+| Costa Morales, Christofer William   | miniChorri            | L  | C | C | C | C |
+| Howard Robles, Guillermo Arturo     | GuillermoPromac       | C  | L | C | C | C |
+| Huaman Gallardo, Bruno Aldair       | BrunoHG10             | C  | C | L | C | C |
+| Miraval Pomalaya, Rodrigo Jesus     | RodMiraval            | C  | C | C | L | C |
+| Ramirez Cabrera, Kenyi Efrain       | Kenyi15upc            | C  | C | C | C | L |
 
-#### 4.2.1.6. Execution Evidence for Sprint Review
+#### 4.2.2.3. Sprint Backlog 2
 
-#### 4.2.1.7. Services Documentation Evidence for Sprint Review
+| ID | Historia de usuario del Product Backlog | Story Points |
+| --- | --- | ---: |
+| US20 | Crear una ruta en borrador | 3 |
+| US19 | Publicar ruta bloquea edición | 3 |
+| US25 | Visualizar rutas asignadas | 5 |
+| US21 | Transportista actualiza estado de entrega | 3 |
+| US22 | Cierre de ruta con y sin pendientes | 2 |
 
-#### 4.2.1.8. Software Deployment Evidence for Sprint Review
+#### 4.2.2.4. Development Evidence for Sprint Review
 
-#### 4.2.1.9. Team Collaboration Insights during Sprint
+#### 4.2.2.5. Testing Suite Evidence for Sprint Review
 
+#### 4.2.2.6. Execution Evidence for Sprint Review
+
+#### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+#### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+#### 4.2.2.9. Team Collaboration Insights during Sprint
+
+### 4.2.3. Sprint 3
+
+#### 4.2.3.1. Sprint Planning 3
+
+#### 4.2.3.2. Aspect Leaders and Collaborators
+
+#### 4.2.3.3. Sprint Backlog 3
+
+#### 4.2.3.4. Development Evidence for Sprint Review
+
+#### 4.2.3.5. Testing Suite Evidence for Sprint Review
+
+#### 4.2.3.6. Execution Evidence for Sprint Review
+
+#### 4.2.3.7. Services Documentation Evidence for Sprint Review
+
+#### 4.2.3.8. Software Deployment Evidence for Sprint Review
+
+#### 4.2.3.9. Team Collaboration Insights during Sprint
 
 
 
@@ -458,3 +511,4 @@ Muestra el historial y frecuencia de commits realizados en GitHub, ayudando a ev
 [retrofit]: https://square.github.io/retrofit/
 [coil]: https://coil-kt.github.io/coil/compose/
 [gherkin]: https://cucumber.io/docs/gherkin/reference/
+
