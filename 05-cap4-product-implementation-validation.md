@@ -449,6 +449,8 @@ Con el fin de mantener una coordinación efectiva y una comunicación fluida ent
 
 #### 4.2.2.3. Sprint Backlog 2
 
+Durante el Sprint 2 se desarrolló la base de la aplicación móvil de Rutana y se incorporaron la gestión de usuarios, las pantallas de inicio e inicio de sesión, la gestión de viajes y el módulo de vehículos y equipos. Los cambios de `feature/shared`, `feature/IAM`, `feature/planning` y `feature/vehicles` se integraron en `develop`. El historial registra también la incorporación de las versiones `0.1`, `0.2.1` y `0.3.1` a `main`.
+
 | ID | Historia de usuario del Product Backlog | Story Points |
 | --- | --- | ---: |
 | US20 | Crear una ruta en borrador | 3 |
@@ -457,13 +459,71 @@ Con el fin de mantener una coordinación efectiva y una comunicación fluida ent
 | US21 | Transportista actualiza estado de entrega | 3 |
 | US22 | Cierre de ruta con y sin pendientes | 2 |
 
+***App Mobile***
+
 #### 4.2.2.4. Development Evidence for Sprint Review
+
+**Aplicación móvil Flutter**
+
+Durante el Sprint 2 se desarrolló la base de la aplicación móvil de Rutana y se incorporaron la gestión de usuarios, las pantallas de inicio e inicio de sesión, la gestión de viajes y el módulo de vehículos y equipos. Los cambios de `feature/shared`, `feature/IAM`, `feature/planning` y `feature/vehicles` se integraron en `develop`. El historial registra también la incorporación de las versiones `0.1`, `0.2.1` y `0.3.1` a `main`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| Rutana-App-Mobile-Flutter | Por confirmar | `b178410` | chore: create base project on flutter | Creación de la estructura inicial del proyecto Flutter. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/shared` | `edca79a` | feat: added the database helper and dependencies to use sqflite y path | Incorporación del componente de acceso a la base de datos local y de las dependencias `sqflite` y `path`. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/shared` | `5bbf069` | feat: added the colors and theme for the app | Definición de la paleta de colores y del tema visual de la aplicación. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/shared` | `6a0e251` | feat: added the widgets we are gonna use for the app | Incorporación de widgets reutilizables para las pantallas de la aplicación. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/shared` → `develop` | `2306af6` | Merge branch 'feature/shared' into develop | Integración de la persistencia local, el tema y los widgets compartidos en `develop`. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/IAM` | `c8283db` | feat: added the iam domain and data for users and added android | Incorporación de las capas de dominio y datos para los usuarios del módulo IAM, así como de la configuración para Android. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/IAM` | `b02fcc1` | feat: added the home screen | Incorporación de la pantalla principal de la aplicación. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/IAM` | `df802e8` | feat: updated the dart and dependency | Actualización de la configuración de Dart y de las dependencias del proyecto. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/IAM` → `develop` | `df95c3c` | Merge branch 'feature/IAM' into develop | Integración de la rama de identidad y acceso en `develop`. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `release/0.1` → `main` | `fa10103` | Merge branch 'release/0.1' into main | Incorporación de la versión `0.1` de la aplicación a la rama principal. | 11/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/planning` | `dac4d67` | feat: enhance home and login screens with improved navigation and UI updates. | Mejoras en la navegación y en la interfaz de las pantallas principal y de inicio de sesión. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/planning` | `63f2965` | feat(routes): add routes screen with trip management functionality. | Incorporación de la pantalla de rutas con funciones de gestión de viajes. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/planning` → `develop` | `2e35871` | Merge branch 'feature/planning' into develop. | Integración de la planificación de rutas y la gestión de viajes en `develop`. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | `release/0.2.1` → `main` | `2e6aa15` | Merge branch 'release/0.2.1' into main | Incorporación de la versión `0.2.1` a la rama principal. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/vehicles` | `a2f2167` | feat(vehicles): integrate fleet management functionality with vehicle and crew handling. | Incorporación de la gestión de flota, vehículos y equipos de trabajo. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | `feature/vehicles` → `develop` | `64575ab` | Merge branch 'feature/vehicles' into develop. | Integración del módulo de vehículos y equipos en `develop`. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | `release/0.3.1` → `main` | `0b3e525` | Merge branch 'release/0.3.1' into main | Incorporación de la versión `0.3.1` a la rama principal. | 12/11/2026 |
+---
 
 #### 4.2.2.5. Testing Suite Evidence for Sprint Review
 
+Se implementaron pruebas automatizadas para el módulo **Vehículos y equipos** de Qoritech, relacionadas con las historias de administración de vehículos, equipos y asignación de recursos en Routes.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| Rutana-App-Mobile-Flutter | Por confirmar | `0a3a813` | feat(fleet): add feature file for vehicle and crew scenarios in Spanish. | Creación del archivo `.feature` con escenarios en español para la gestión de vehículos y equipos de trabajo. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | Por confirmar | `2a83cbb` | feat(fleet): add bdd test implementation for fleet feature scenarios in Spanish. | Implementación de las pruebas BDD correspondientes a los escenarios del módulo de flota escritos en español. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | Por confirmar | `6a0f836` | feat(fleet): add test fixtures for user and vehicle creation. | Incorporación de datos de prueba reutilizables para crear usuarios y vehículos. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | Por confirmar | `185b297` | feat(fleet): add unit tests for vehicle and crew management functionalities. | Incorporación de pruebas unitarias para las funcionalidades de gestión de vehículos y equipos de trabajo. | 12/11/2026 |
+| Rutana-App-Mobile-Flutter | Por confirmar | `bf0b560` | feat(fleet): implement BDD step definitions for vehicle and crew management scenarios. | Implementación de las definiciones de pasos que vinculan los escenarios de gestión de vehículos y equipos con el código de las pruebas BDD. | 12/11/2026 |
+
 #### 4.2.2.6. Execution Evidence for Sprint Review
 
+A continuación, se muestra un video con los avances realizados durante el Sprint 2.
+
+Video del sprint2:
+
+<img src="assets/images/cap4/execution-evidence-2.png" alt="cap5" style="height: 500px !important; width: 700px !important;">
+
+Enlace del video: [Video Sprint2]()
+
+Duración: 0:00 - 
+
 #### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 2 se desarrolló la base de la aplicación móvil de Rutana en Flutter. Se incorporaron el acceso por roles, la gestión de rutas y viajes, y el módulo de vehículos y equipos de trabajo.
+
+**Descripción del logro**
+
+- Se configuró la base de datos local SQLite para almacenar los usuarios y se crearon componentes visuales reutilizables.
+- Se implementaron el registro y el inicio de sesión para los roles de administrador y conductor, junto con la navegación desde la pantalla principal.
+- Se desarrolló el módulo de rutas para crear viajes en borrador, asignar un vehículo y un conductor, publicar la ruta y confirmar el despacho.
+- Se incorporó el registro de entregas completas, parciales o fallidas por parada, así como el reporte de incidentes y el cierre del viaje.
+- Se integró el módulo de flota para gestionar vehículos y equipos de trabajo.
+- Se añadieron pruebas unitarias, datos de prueba reutilizables y escenarios BDD para la gestión de vehículos y equipos.
 
 #### 4.2.2.8. Software Deployment Evidence for Sprint Review
 
